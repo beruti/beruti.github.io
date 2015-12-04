@@ -1,0 +1,12 @@
+div.a {
+width: 50px;
+height:50px;
+ background-color: #AABBCC;
+position:fixed; 
+};
+
+lampStyle{							/*input forms suck - you cannot target them other than using inline styling*/ 
+	background: yellow;
+	width: 50px;
+};
+
