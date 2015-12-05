@@ -12,6 +12,8 @@ OR popeye and spinach - avoiding other guy
 
 OR block removing - character falls down into a hole - quickest time - blocks are being generated all the time - how to check when they reach the bottom of page though?
 
+OR Shah of Blah and have to collect the words
+
 I am going to make a game about Aladdin and his magic carpet.
 There will be a backdrop of an arabian desert - hopefully taken from the Sega Game itself.
 
@@ -28,6 +30,12 @@ generate a certain amount of these objects per a time frame
 
 SET cursor: to an image of choice;
 
+SET cursor speed
+
+click event on images
+--> push to array
+--> get length of array and return to screen as score  x3 (for number of wishes per lamp)
+
 - mouseover 
 
 Jaffar will appear as someone to avoid - if mouseover - will get a life taken off
@@ -39,7 +47,11 @@ will run for 20 seconds
 
 - score keeper
 
+input for name
+
 points system 
+
+
 
 -------HTML--------
 
@@ -61,6 +73,13 @@ ids:
 
 how to structure?
 
+nav tag - game name - score counter
+
+could have divs of each lamp style as visibility:hidden then change 
+
+p tag for instructions
+
+
 need to be clickable
 - series of buttons
 
@@ -80,6 +99,15 @@ images
 responsive design
 positioning of elements - make fixed and then change with responsive design
 
+potentially how to style instructions - so that they disappear when game begins
+
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
 
 -------JS--------
 
