@@ -7,23 +7,11 @@ $(document).ready(function(){
   var player1 = {
     score: null
   };
-  //console.log(player1);
-  // is an object
+  /*
   var player2 = {
     score: null
   }
-
-  function changePlayer() {
-    //needs to reset all variables but store player1 score
-    // so what needs to be reset? 
-    // what functions will need to be run again?
-    //- startEverything should be fine for animating - for setting up click event listeners 
-    // targets gets set to 0 when you invoke setUpEventListeners();
-    // need to pull out player1 score BUT also make sure player2 score is not written to on first go
-  };
-  //var player2={};
-  //var players[];
-
+  */
 
   //------------------------------------------------
   // Div instructions and score - function to hide on beginning
@@ -56,7 +44,7 @@ $(document).ready(function(){
     animateImageRiki();
 	 	setUpEventListners(); 
 	 	theFinalCountDown();
-    //playIntro();
+    playIntro();
     InstructionsHider();
 	};
 
@@ -79,7 +67,6 @@ $(document).ready(function(){
   			clearInterval(countDownInterval);
   			// call function that stops everything
   			keeprunning = false;
-        player1 === false;
   
         startSound.stop();
         // clears screen of objects when time runs out
@@ -87,6 +74,8 @@ $(document).ready(function(){
         //changes functionality of start button to refresh page
         $('.startButton').html("PLAY AGAIN?");
         $('.startButton').click(function(){ document.location.href=""; }); 
+        
+        
 
           //Show the score div
           scoreShow();
@@ -94,9 +83,9 @@ $(document).ready(function(){
   	}, 1000);
   };
 
-  //---------------------------------------------                                                                                                                            
-  //------------------ANIMATION------------------
-  //---------------------------------------------
+  //-------------------------------------------                                                    //------------------ANIMATION----------------
+  //-------------------------------------------
+
   function makeNewPosition() {                                                 
       
       var H = $(window).height() - 50;
@@ -197,7 +186,6 @@ $(document).ready(function(){
   //------------CLICK AND SCORE--------------
   //-----------------------------------------
 	function setUpEventListners() {
-    if (player1 === true) {
     	var targets = 0;
     	var collectedItemsDisplayPanel = $('#scoreDisplay');
       var endScreenShow = $("#scoreContainer");		
@@ -206,7 +194,8 @@ $(document).ready(function(){
     	$('.target').click(function(){
         var pointsToAdd = $(this).data("points");
         // ----gun-sound-------
-         gunSound = soundManager.createSound({                                                            //create sound object
+         gunSound = soundManager.createSound({
+         //create sound object
          url: 'gamemusic/pistolSound.mp3'
          }).play(); 
         //-------score--counter--
@@ -214,51 +203,17 @@ $(document).ready(function(){
   	    console.log(targets);
         player1.score=targets;
         console.log(player1);
+        $(this).remove(); //removes element from page when clicked and score already logged
         //-------display---------
         collectedItemsDisplayPanel.html(" Score " + targets); 
         // add to endScreenShow div
         console.log(endScreenShow);
+        
+        //---Setting-instructions-screen---
+        endScreenShow.html("<p>Score " + targets + "</p>" + "<button class='startButton'>" + "</button>"); 
       });
-    } else { 
-
-      var targets = 0;
-      var collectedItemsDisplayPanel = $('#scoreDisplay');
-      var endScreenShow = $("#scoreContainer");   
-      console.log(endScreenShow);
-
-      $('.target').click(function() {
-        var pointsToAdd = $(this).data("points");
-        // ----gun-sound-------
-        gunSound = soundManager.createSound({ //create sound object
-          url: 'gamemusic/pistolSound.mp3'
-        }).play(); 
-        //-------score--counter--
-        targets +=pointsToAdd;
-        player2.score=targets;
-        console.log(player2);
-        //-------display---------
-        collectedItemsDisplayPanel.html(" Score " + targets); 
-        // add to endScreenShow div
-        console.log(endScreenShow);
-      });        
-    }
-
-    //-----------------------------------------
-    //------------PLAYER score COMPARISON------
-    //-----------------------------------------
-    var winner = function getWinner() {
-      if (player1.score > player2.score) {
-        console.log("player1 wins")
-      } else {
-        console.log("player2 wins")
-      }
-    };
-
-    //---Setting-instructions-screen---
-    endScreenShow.html("<p>Score " + targets + "</p>" + "<button class='startButton'>" + "</button>");
-
-    //$(this).fadeTo('fast', 0.5);       
-    $(this).remove(); //removes element from page when clicked and score already logged
+   
+    
   };
    
   //------------------------------------------------

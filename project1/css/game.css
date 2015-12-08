@@ -99,6 +99,10 @@ div.endScreenShow{
 }
 */
 /*this doesnt get crossed out in inspector but doesnt bring image inside div outlines either*/
+.blur{
+	-webkit-filter: blur(3px);
+	filter: blur(3px);
+}
 
 button{
 	margin:0 auto;
