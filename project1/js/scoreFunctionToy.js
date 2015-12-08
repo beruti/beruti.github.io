@@ -8,10 +8,12 @@ $(document).ready(function(){
     score: null
   };
   //console.log(player1);
+
   // is an object
   var player2 = {
     score: null
   }
+
   /*
   function changePlayer() {
     //needs to reset all variables but store player1 score
@@ -46,12 +48,6 @@ $(document).ready(function(){
     $("div#scoreContainer").addClass("score"); 
     $(".target").show();
   }
-  /*
-  function scoreShowForBoth(){
-    $("div.score").addClass("endScreenShow"); 
-    $("div.score").removeClass("score");
-  }
-  */
 
   //-----------------------------------------
   //------------PLAYER score COMPARISON------
@@ -114,7 +110,6 @@ $(document).ready(function(){
 
     };
   
-
   $('.startButton').click(startEverything);     
   
   //-----------------------------------------
@@ -173,7 +168,7 @@ $(document).ready(function(){
         console.log(player2.score)
         getWinner();
         //---Setting-instructions-screen---
-        endScreenShow.html("<p>Score " + targets + "</p>" + winner + "<button class='startButton'>" + "</button>");
+        endScreenShow.html("<p>Score " + targets + "</p>" + "<p>" + winner + "</p>" + "<button class='startButton'>" + "</button>");
 
         //removes element from page when clicked and score already logged
         $(this).remove(); 
@@ -190,7 +185,7 @@ $(document).ready(function(){
 
   function theFinalCountDown(){
     var timerDisplay = $("#timerDisplay");
-    var timeCounter= 20;
+    var timeCounter= 10;
     var countDownInterval = window.setInterval(function(){
       timeCounter--;
       timerDisplay.html("Timer " + timeCounter);
@@ -214,7 +209,7 @@ $(document).ready(function(){
 
   function theSecondFinalCountDown(){
     var timerDisplay = $("#timerDisplay");
-    var timeCounter= 20;
+    var timeCounter= 10;
     var countDownInterval = window.setInterval(function(){
       timeCounter--;
       //console.log(timeCounter); // shows the counter reducing - lets put this in a physical element on the page
@@ -339,7 +334,7 @@ $(document).ready(function(){
   };  
    
   //------------------------------------------------
-  //-------INPUT SOUND MANAGER LIBRARY-------------- //put in sound manager in html
+  //-------INPUT SOUND MANAGER LIBRARY-------------- 
   //----------- + --Background Music----------------
 
   soundManager.setup({

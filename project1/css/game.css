@@ -1,6 +1,7 @@
 *{
-	border: 1px dashed #00E5EE;
+	/*border: 1px dashed #00E5EE;*/
 	color: yellow;
+	font-family: 'Slabo 27px', serif;
 }
 
 html { 
@@ -24,40 +25,29 @@ body.endscreen{
 h2{
 	display: inline-block;
 }
-/* issues to fix = div are block by default and img are inline by default - was simply a padding issue
-
-http://www.w3schools.com/css/css_display_visibility.asp
- */
 
 .a, .b, .c, .d, .e, .f, .g, .h, .riki{
 width:80px;
 height:80px;
-position:fixed; /*issue - all images move in a defined range but this range is set from their starting point- with position relative all are spread out so those closest to the edge of the div move outside it as it is still in their range */
-/* could just change it back to a window game and put position as fixed*/
+position:fixed; 
 margin:20px;
 border-radius: 50%;
 align-content:center;
-border: 2px solid yellow;
+border: 5px solid yellow;
 }
 
-/*div#instructionScreen{
-	/*display:none;*/	
-/*	position: relative;
-}*/
-
 div#instructionScreen{
-	background: url("https://41.media.tumblr.com/79ae118c6c671b65727c90e7eed57c7f/tumblr_muv9xc8plU1qbrs6lo1_540.jpg");
-	height: 400px;
+	background: url("https://41.media.tumblr.com/79ae118c6c671b65727c90e7eed57c7f/tumblr_muv9xc8plU1qbrs6lo1_540.jpg") no-repeat ;
+	height: 525px;
 	width: 40%;
 	margin: 0 auto;
-	margin-top: 10%;
 	border: 2px double yellow;
 	position:relative;
 }
 
 /* TO DO 
 https://css-tricks.com/the-blur-up-technique-for-loading-background-images/
-Make all images link from internet - accesible from online */
+*/
 
 div p{
 	position:absolute;
@@ -67,11 +57,17 @@ div p{
 	color: red;
 	background-color: black;
 	padding: 0 40%;
+	width: 85px;
+	height: 125px;
+/*	font-family: MommasTypeWriter; No Dice */
 }
 
-div button{
+button{
 	position: relative;
-	margin-bottom: 20% 10%;
+	margin:0 auto;
+	width: 100px;
+	height: 50px;
+	text-shadow: #007fff;
 }
 
 div.ScoreBoard{
@@ -85,11 +81,27 @@ div.ScoreBoard{
 div.score{
 	display:none;
 }
+
+div#scoreContainer{
+	height: 525px;
+	width: 40%;
+	margin: 0 auto;
+	border: 2px double yellow;
+	font-size: 40px;
+}
+
+div#scoreContainer p{
+	position: relative;
+	display: block;
+}
+
 /*
   need to prepend as div needs to be placed at top of screen 
 	so get rid of the div at start and then make it from javascript	
 	when - want it to be created at end of game - so when timer ends
 */
+/* make class in html and then style it - set display as none - then set to fadeIn and toggleClass to blur other shit */
+
 
 div.endScreenShow{
 	height: 400px;
@@ -97,20 +109,15 @@ div.endScreenShow{
 	margin: 100px auto;
 	border: 2px double yellow;
 }
-*/
+
 /*this doesnt get crossed out in inspector but doesnt bring image inside div outlines either*/
 .blur{
 	-webkit-filter: blur(3px);
 	filter: blur(3px);
 }
 
-button{
-	margin:0 auto;
-	width: 200px;
-	height: 50px;
-}
 
-/* make class in html and then style it - set display as none - then set to fadeIn and toggleClass to blur other shit */
+
 
 
 

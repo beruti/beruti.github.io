@@ -1,117 +1,86 @@
 # beruti.github.io
 
-Planned using Agile and SCRUM
+******Why you did it?*****
 
-OR jason and the argonauts - golden fleeces and cyclops from monsters inc
+I completed this project as part of a series of work undertaken throughout the GA WDI course.
 
-OR homer and donuts animation of eating on click
+I wanted to recreate a shoot-em-up using my nascent programming ability in HTML, CSS and JavaScript.
 
-OR sinbad and sailors - recruiting sailors - avoiding sirens
+Whilst the game was originally inspired by prior flirtations with Disney's Aladdin on the Sega-Mega Drive, graphic resources were unpermitting.
 
-OR popeye and spinach - avoiding other guy
+The game is now inspired by a potent mix; the work of the cornish artist Danny Fox, time spent on a cattle ranch in Australia, arcade classic shoot-em ups and internet sensation Rick Astley. 
 
-OR block removing - character falls down into a hole - quickest time - blocks are being generated all the time - how to check when they reach the bottom of page though?
+*********The**Game********
+9 are wanted DEAD or ALIVE.
 
-OR Shah of Blah and have to collect the words
+Rick Astley has the highest bounty on his head - weighing in at 10 points. 
 
-I am going to make a game about Aladdin and his magic carpet.
-There will be a backdrop of an arabian desert - hopefully taken from the Sega Game itself.
+While Billy the Kid is getting on a bit now, he moves a bit slower, the price is still high - 6 points for Billy. 
 
-The magic carpet will move with the mouse - in fact the cursor will itself BE a magic carpet - on which is sat Aladdin.
+The rest are a ragtag bunch, petty cattle theives and liquor store robbers - some say they're a gang but it seems there's no back bone to any of 'em. 3 points for any of this bunch riding in red.
 
-Items will appear in random positions on the screen which Aladdin can collect OR as a bonus in design avoid.
+*******Tech you used?******
 
-- Items to collect/objects to make
+HTML
 
-- click
+CSS
 
-the gini/princess jasmin/lamps only one gini and one jasmin a game - many lamps 
-generate a certain amount of these objects per a time frame
+JS
 
-SET cursor: to an image of choice;
+Dom Manipulation
+- created instructions screen elements using jQuery
 
-SET cursor speed
-
-click event on images
---> push to array
---> get length of array and return to screen as score  x3 (for number of wishes per lamp)
-
-- mouseover 
-
-Jaffar will appear as someone to avoid - if mouseover - will get a life taken off
-- he pops up randomly too
-
-- game time frame: will run infinitely?
-
-will run for 20 seconds
-
-- score keeper
-
-input for name
-
-points system 
+Objects 
+- Players Scores
 
 
+*****Improvements you would like to make?*****
 
--------HTML--------
-
-links to CSS and JS
-what will contain elements?
-
-a score counter
-- an inline element/div
-- image of a cartoon heart
-- counter next to it
-
-classes:
-- lamps
-
-ids:
-- gini
-- jasmin
-- jaffar
-
-how to structure?
-
-nav tag - game name - score counter
-
-could have divs of each lamp style as visibility:hidden then change 
-
-p tag for instructions
-
-
-need to be clickable
-- series of buttons
-
-<input type="button" value="lamp" class="lamp"></input>
-
-<input type="button" value="gini" class="gini"></input>
-
-<input type="button" value="jasmin" class="jasmin"></input>
-
-<input type="button" value="jaffar" class="jaffar"></input>
-
-
-
--------CSS---------
-
-images
-responsive design
-positioning of elements - make fixed and then change with responsive design
-
-potentially how to style instructions - so that they disappear when game begins
-
-p {
-    display: block;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
+/* trying to implement a custom text
+@font-face {
+    font-family: MommasTypeWriter;
+    src: url(gameimages/moms_typewriter/momtypewriter.ttf);
+    font-weight:400;
 }
+*/
 
--------JS--------
+---Optional-Player-Numbers----
 
-event listeners
-- click
--mouseover - mouseout
+Either play alone or with a friend 
+--> this is loner exclusionist
+
+
+---------ElDiablo------
+
+Both Rick Astley and Billy the Kid are supposed to move between generated and old coordinates within a third of a second.
+
+(currently only the dastardly Rick Astley moves at such speeds and old Billy is going at a light hobble in his older years)
+
+If you hit the pair then the combined speed of animation is 666.
+
+Thus el diablo is summoned - he clears the board but takes 2 double clicks to defeat and moves at the speed of two thirds of a second. 
+
+------Loading--Screens---
+
+Better backgrounds - with both more spinners and whizzers
+
+Cursor of a spinning chamber for 3 seconds between shots
+
+---Images-Loading-To-Page-By-Random------
+
+Have images moving but wanted them twinkling
+
+-----A-way-of-measuring-the-distance-the-mouse-travelled-----
+
+I wanted to make a game about a villager in a developing nation that has poor access to water.
+
+The further the player is away from the water source and the longer they have been away from their point of origin(the village), the slower the cursor would move to simulate the increasing efforts required. 
+
+
+
+
+
+
+
+Planned using Agile and SCRUM
 
