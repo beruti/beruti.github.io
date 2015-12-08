@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Danny Fox's Wild West</title>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"> </script>
+	<script src="soundmanager/script/soundmanager2-jsmin.js"></script>
+
+ <!--						SoundManager                            
+
+	<script>
+	soundManager.setup({
+	  url: 'soundmanager/swf',
+	  flashVersion: 9, // optional: shiny features (default = 8)
+	  // optional: ignore Flash where possible, use 100% HTML5 mode
+	  // preferFlash: false,
+	  onready: function() {
+	    // Ready to use; soundManager.createSound() etc. can now be called.
+	    console.log("soundmanager ready");
+	    var sound = soundManager.createSound({                                                            //create sound object
+	      url: 'aladdinmusic/TheDesert.mp3'
+	    }).play();   
+	  }
+	});
+	</script>
+
+-->
+	<script type="text/javascript" src="js/game.js"></script>
+	<link rel="stylesheet" href="css/game.css">
+	<style type="text/css">body, a:hover {cursor: url(http://cur.cursors-4u.net/mechanics/mec-5/mec424.cur), progress !important;}</style><a href="http://www.cursors-4u.com/cursor/2011/11/02/revolver-13.html" target="_blank" title="Revolver"><img src="http://cur.cursors-4u.net/cursor.png" border="0" alt="Revolver" style="position:absolute; top: 0px; right: 0px;" /></a>
+</head>
+<body>
+
+	<div id='scoreContainer' class="score">
+	<p> You best find your eye and steady your hand soon son; one day you might just wake up with that yellow belly fulla lead.	
+	<button class="startButton"></button> 
+	</div> 
+
+	<div id="instructionScreen">
+	<p>Reach for the sky
+	 </br>
+	<small>Disparar
+	</br>
+	Los Bandidos!</small>
+	</br>
+	<button class="startButton">START</button> 
+	</p>
+	</div> 
+
+
+	<h2 id="scoreDisplay">Score</h2>
+	<h2 id="timerDisplay">Timer</h2>
+
+	<img src="gameimages/billytheKid.png" data-points="10" class="a target billy">
+
+	<img src="gameimages/cowboy1.png" data-points="3" class="b target">
+
+	<img src="gameimages/cowboy2.png" data-points="3" class="c target">
+
+	<img src="gameimages/cowboy3.png" data-points="3" class="d target">
+
+	<img src="gameimages/cowboy4.png" data-points="3" class="e target">
+
+	<img src="gameimages/cowboy5.png" data-points="3" class="f target">
+
+	<img src="gameimages/cowboy6.png" data-points="3" class="g target">
+
+	<img src="gameimages/cowboy7.png" data-points="3" class="h target">
+
+	<img src="gameimages/riki.png" data-points="10" class="riki target">
+
+
+
+
+
+	
+</body>
+</html>
+
+
+<!--	<input type="button" value="gini" class="gini"></input>
+
+	<input type="button" value="jasmin" class="jasmin"></input>
+
+	<input type="button" value="jaffar" class="jaffar"></input> 
