@@ -14,21 +14,6 @@ $(document).ready(function(){
     score: null
   }
 
-  /*
-  function changePlayer() {
-    //needs to reset all variables but store player1 score
-    // so what needs to be reset? 
-    // what functions will need to be run again?
-    //- startEverything should be fine for animating - for setting up click event listeners 
-    // targets gets set to 0 when you invoke setUpEventListeners();
-    // need to pull out player1 score BUT also make sure player2 score is not written to on first go
-    (player1 === false);
-  };
-  //var player2={};
-  //var players[];
-  */
-
-  // is currently selecting player2 to play and showing no scoreboard or anything
 
   //------------------------------------------------
   // Div instructions and score - function to hide on beginning
@@ -53,9 +38,6 @@ $(document).ready(function(){
   //------------PLAYER score COMPARISON------
   //-----------------------------------------
 
-  //player1.score and player2.score need to be globally available
-  // this is outside of scope! not getting called - need to take getWinner out?
-
   var winner = null;
   function getWinner() {
     if (player1.score > player2.score) {
@@ -65,9 +47,6 @@ $(document).ready(function(){
     }
   };
   console.log(winner)
-
-  //getWinner(); // currently calling before game has happened
-  // where do you want this result to print - inside end div with text
 
   //-----------------------------------------------
   //---------IGNITION----KEY-----------------------
@@ -93,8 +72,7 @@ $(document).ready(function(){
   };
 
  var startEverythingForPlayer2 = function startEverythingForPlayer2(){
-      HideScoreForSecondRound(); //hiding score but none of the elements are coming back
-                                 // .remove() on player1s go is completely removing elements from dom
+      HideScoreForSecondRound(); 
       animateImageA();
       animateImageB();
       animateImageC();
@@ -116,13 +94,12 @@ $(document).ready(function(){
   //------------CLICK AND SCORE--------------
   //-----------------------------------------
   function setUpEventListners() {
-    var targets
+    var targets;
     if (keeprunning === true) {
       targets = 0;
       var collectedItemsDisplayPanel = $('#scoreDisplay');
       var endScreenShow = $("#scoreContainer");   
     //  console.log(endScreenShow);
-
       $('.target').click(function(){
         var pointsToAdd = $(this).data("points");
         // ----gun-sound-------
@@ -136,10 +113,8 @@ $(document).ready(function(){
         //console.log(player1.score);
         //-------display---------
         collectedItemsDisplayPanel.html(" Score " + targets); 
-
-       //---Setting-instructions-screen---
-       endScreenShow.html("<p>Score " + targets + "</p>" + "<button class='startButton'>" + "</button>");
-
+       //---Setting-end-screen---
+       endScreenShow.html("<p>Score " + targets + "</p>" + "<button class='startButton' >" + "</button>").css("margin","auto");
        //removes element from page when clicked and score already logged
        $(this).hide(); 
        
@@ -149,9 +124,7 @@ $(document).ready(function(){
       targets = 0;
       var collectedItemsDisplayPanel = $('#scoreDisplay');
       var endScreenShow = $("#scoreContainer");   
-      //console.log(endScreenShow);
-      // gets to here but doesnt restart
-      $('.target').off()
+      $('.target').off();
       $('.target').click(function() {
         var pointsToAdd = $(this).data("points");
         // ----gun-sound-------
@@ -167,7 +140,7 @@ $(document).ready(function(){
         console.log(player1.score);
         console.log(player2.score)
         getWinner();
-        //---Setting-instructions-screen---
+        //---Setting-end-screen---
         endScreenShow.html("<p>Score " + targets + "</p>" + "<p>" + winner + "</p>" + "<button class='startButton'>" + "</button>");
 
         //removes element from page when clicked and score already logged
@@ -226,7 +199,7 @@ $(document).ready(function(){
         //getWinner();
         //changes functionality of start button to refresh page
         $('.startButton').html("PLAY AGAIN?");
-        $('.startButton').click(function(){ document.location.href=""; });  // refresh page on click of button
+        $('.startButton').click(function(){ document.location.href=""; });  
       
         } 
     }, 1000);
@@ -339,9 +312,7 @@ $(document).ready(function(){
 
   soundManager.setup({
     url: 'soundmanager/swf',
-    flashVersion: 9, // optional: shiny features (default = 8)
-    // optional: ignore Flash where possible, use 100% HTML5 mode
-    // preferFlash: false,
+    flashVersion: 9, 
     onready: function() {
       // Ready to use; soundManager.createSound() etc. can now be called.
       console.log("soundmanager ready");  

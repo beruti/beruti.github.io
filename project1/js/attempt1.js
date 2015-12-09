@@ -13,6 +13,30 @@ $(document).ready(function(){
   }
   */
 
+  /*
+  function changePlayer() {
+    //needs to reset all variables but store player1 score
+    // so what needs to be reset? 
+    // what functions will need to be run again?
+    //- startEverything should be fine for animating - for setting up click event listeners 
+    // targets gets set to 0 when you invoke setUpEventListeners();
+    // need to pull out player1 score BUT also make sure player2 score is not written to on first go
+    (player1 === false);
+  };
+  //var player2={};
+  //var players[];
+  */
+
+  // is currently selecting player2 to play and showing no scoreboard or anything
+
+
+  //player1.score and player2.score need to be globally available
+  // this is outside of scope! not getting called - need to take getWinner out?
+
+
+  //getWinner(); // currently calling before game has happened
+  // where do you want this result to print - inside end div with text
+
   //------------------------------------------------
   // Div instructions and score - function to hide on beginning
   //------------------------------------------------
@@ -25,6 +49,10 @@ $(document).ready(function(){
     $("div.score").addClass("endScreenShow");
     $("div.score").removeClass("score");
   }
+
+  //hiding score but none of the elements are coming back
+  // .remove() on player1s go is completely removing elements from dom
+
 
   //-----------------------------------------------
   //---------IGNITION----KEY-----------------------
@@ -210,6 +238,14 @@ $(document).ready(function(){
         console.log(endScreenShow);
         
         //---Setting-instructions-screen---
+        /*
+          need to prepend as div needs to be placed at top of screen 
+          so get rid of the div at start and then make it from javascript 
+          when - want it to be created at end of game - so when timer ends
+        */
+        /* make class in html and then style it - set display as none - then set to fadeIn and toggleClass to blur other shit */
+
+
         endScreenShow.html("<p>Score " + targets + "</p>" + "<button class='startButton'>" + "</button>"); 
       });
    
