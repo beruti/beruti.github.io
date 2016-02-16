@@ -93,6 +93,7 @@ $(document).ready(function(){
   //-----------------------------------------
   //------------CLICK AND SCORE--------------
   //-----------------------------------------
+  
   function setUpEventListners() {
     var targets;
     if (keeprunning === true) {
@@ -150,7 +151,6 @@ $(document).ready(function(){
     }
 
   }; 
-
 
   //------------------------------------------------
   //-------MAKING TIMER + TIMEOUT FUNCTIONS---------
@@ -237,7 +237,6 @@ $(document).ready(function(){
   function animateImageB() { 
     if (keeprunning === true || secondPlayerAnimate === true) {
       $('.b').animate({top: makeNewPosition()[0], left: makeNewPosition()[1] }, 1000, function() {
-        //console.log('b');           
         animateImageB();
       });
     }                                                 
@@ -246,7 +245,6 @@ $(document).ready(function(){
   function animateImageC() { 
     if (keeprunning === true || secondPlayerAnimate === true) {
       $('.c').animate({top: makeNewPosition()[0], left: makeNewPosition()[1] }, 1000, function() { 
-      // console.log('c');           
       animateImageC();
       });
     }                                                 
@@ -255,7 +253,6 @@ $(document).ready(function(){
   function animateImageD() {
     if (keeprunning === true || secondPlayerAnimate === true) {
       $('.d').animate({top: makeNewPosition()[0], left: makeNewPosition()[1] }, 1000, function() { 
-      // console.log('d');           
         animateImageD();
       });
     }                                                 
@@ -264,7 +261,6 @@ $(document).ready(function(){
   function animateImageE() {
     if (keeprunning === true || secondPlayerAnimate === true) {
       $('.e').animate({top: makeNewPosition()[0], left: makeNewPosition()[1] }, 1000, function() {
-        // console.log('e');           
         animateImageE();
       });
     }                                                 
@@ -273,7 +269,6 @@ $(document).ready(function(){
   function animateImageF() {       
     if (keeprunning === true || secondPlayerAnimate === true) {                                      
       $('.f').animate({top: makeNewPosition()[0], left: makeNewPosition()[1] }, 1000, function() {
-        // console.log('a');          
         animateImageF();
       });
     }
@@ -282,7 +277,6 @@ $(document).ready(function(){
   function animateImageG() {       
     if (keeprunning === true || secondPlayerAnimate === true) {                                      
       $('.g').animate({top: makeNewPosition()[0], left: makeNewPosition()[1] }, 1000, function() {
-        // console.log('a');          
         animateImageG();
       });
     }
@@ -291,7 +285,6 @@ $(document).ready(function(){
   function animateImageH() {       
     if (keeprunning === true || secondPlayerAnimate === true) {                                      
       $('.h').animate({top: makeNewPosition()[0], left: makeNewPosition()[1] }, 1000, function() {
-        // console.log('a');          
         animateImageH();
       });
     }
@@ -300,7 +293,6 @@ $(document).ready(function(){
   function animateImageRiki() {       
     if (keeprunning === true || secondPlayerAnimate === true) {                                      
       $('.riki').animate({top: makeNewPosition()[0], left: makeNewPosition()[1] }, 333, function() {  
-      // console.log('riki');          
         animateImageRiki();
       });
     }

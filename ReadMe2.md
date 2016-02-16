@@ -117,3 +117,4 @@ The magic carpet will move with the mouse - in fact the cursor will itself BE a 
 
 Items will appear in random positions on the screen which Aladdin can collect OR as a bonus in design avoid.
 
+I

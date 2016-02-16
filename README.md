@@ -13,6 +13,7 @@ The game is inspired by a potent mix; the work of the cornish artist Danny Fox, 
 Danny Fox's Wild West was planned using Agile and SCRUM.
 
 *********The**Game********
+
 9 are wanted DEAD or ALIVE.
 
 Rick Astley has the highest bounty on his head - weighing in at 10 points. 
