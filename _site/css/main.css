@@ -1,0 +1,280 @@
+/* MAIN */
+body {
+  font-family: 'Droid-Sans',Helvetica Neue,Helvetica,Arial,sans-serif;
+  background-color: #fff;
+}
+
+h1, h2, h3, h4, h5{
+  letter-spacing: 0.02em;
+}
+li{
+  list-style-type: none;
+}
+
+/* NAVIGATION BAR */
+#nav {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  margin-right: 20px;
+}
+
+#navlist {
+  padding: 0;
+  list-style-type: none;
+  float: right;
+}
+
+#navlist li {
+  display: block;
+  padding-left: 10px;
+}
+
+#navlist a {
+  font-size: 13px;
+  color: #FF1717;
+  font-weight: 700;
+  font-family: 'Droid-Sans',Helvetica,Arial,sans-serif;
+  text-transform: uppercase;
+}
+
+#navlist a:hover {
+  text-decoration: none;
+  transition: 0.05s ease-out;
+  border-bottom: 2px #FF1717 solid;
+}
+
+.active {
+  text-decoration: none;
+  border-bottom: 2px #FF1717 solid;
+}
+
+/* INDEX PAGE LAYOUT */
+#main {
+  position: fixed;
+  bottom: 0;
+  padding: 60px 0;
+  padding-right: 40px;
+}
+
+/* LOGO */
+.logo {
+  margin-bottom: 25px;
+}
+
+.logo a {
+  text-decoration: none;
+  font-size: 26px;
+  color: #FF1717;
+  font-weight: 700;
+  line-height: 27px;
+}
+/*
+#logoBar {
+  border-width: 2px;
+  border-color: #3C3C3C;
+  /*background-color: #FF1717;*/
+/*  background-color: #3C3C3C;
+  border-style: solid;
+  width: 100px;
+  margin: 0;
+  padding: 0;
+  margin-top: 7px;
+}*/
+
+/* INDEX PAGE INTRO PARAGRAPH */
+#introParagraph {
+  font-size: 13px;
+  color: #3C3C3C;
+  font-weight: bold;
+}
+
+#introParagraph a {
+  font-size: 13px;
+  color: #787878;
+}
+
+#introParagraph a:hover {
+  text-decoration: none;
+  border-bottom: 2px #787878 solid;
+}
+
+/* INDEX PAGE SOCIAL LINKS */
+#socialLinks ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+#socialLinks li a {
+  text-decoration: none;
+  color: #787878;
+  font-size: 11px;
+}
+
+#socialLinks li a:hover {
+  text-decoration: none;
+  border-bottom: 2px #787878 solid;
+}
+
+/*WDI PAGE MAIN*/
+.mainBar {
+  border-width: 3px;
+  border-color: #390077;
+  width: 90px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 3px;
+}
+
+.photo {
+  width: 100%;
+}
+
+/*INTRODUCTION SECTION*/
+#introSection {
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 12px;
+  margin-bottom: 50px;
+  color: #3C3C3C;
+}
+
+#intro p {
+  text-decoration: none;
+  font-size: 14px;
+  color: #390077;
+  font-weight: bold;
+  line-height: 20px;
+  font-family: 'Droid-Sans',Helvetica,Arial,sans-serif;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  margin-left: 50px;
+}
+
+/*PROJECTS SECTION*/
+#projects p {
+  text-decoration: none;
+  font-size: 14px;
+  color: #390077;
+  font-weight: 700;
+  line-height: 20px;
+  font-family: 'Droid-Sans',Helvetica,Arial,sans-serif;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  margin-left: 27px;
+}
+
+.projectSection h1 {
+  margin-top: 5px;
+  margin-bottom: 12px;
+}
+
+.projectSection h1 a {
+  font-size: 16px;
+  color: #3C3C3C;
+  font-weight: 700;
+  font-family: 'Droid-Sans',Helvetica,Arial,sans-serif;
+}
+
+.projectSection h1 a:hover {
+  text-decoration: none;
+  border-bottom: 2.5px #303030 solid;
+}
+
+.projectSection {
+  margin-bottom: 20px;
+}
+
+.projectLinks a {
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 12px;
+  color: #787878;
+}
+
+.projectLinks a:hover {
+  text-decoration: none;
+  border-bottom: 2px #787878 solid;
+}
+
+.projectSection p {
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 12px;
+  color: #3C3C3C;
+  margin-top: -5px;
+}
+
+/*INFORMATION SECTION*/
+#info p {
+  text-decoration: none;
+  font-size: 14px;
+  color: #390077;
+  font-weight: 700;
+  line-height: 20px;
+  font-family: 'Droid-Sans',Helvetica,Arial,sans-serif;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  margin-left: 60px;
+}
+
+#infomation {
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+
+#infolinks a {
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 12px;
+  color: #3C3C3C;
+}
+
+#infolinks a:hover {
+  text-decoration: none;
+  border-bottom: 2px #303030 solid;
+}
+
+#infolinks ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+/*MOBILE NAV BAR*/
+
+@media screen and (max-width: 500px) {
+
+    #nav {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    #navlist {
+      margin-top: 10px;
+    } 
+
+    #navlist li {
+      display: block;
+      text-align: right;
+      margin-bottom: 5px;
+    }
+
+    #navlist a {
+      font-size: 12px;
+    }
+
+    .logo a {
+      text-decoration: none;
+      font-size: 18px;
+      color: #390077;
+      font-weight: 700;
+      line-height: 20px;
+    }
+
+    #logoBar {
+      border-width: 2px;
+      border-color: #390077;
+      background-color: #390077;
+      border-style: solid;
+      width: 70px;
+      margin: 0;
+      padding: 0;
+      margin-top: 7px;
+    }
+
+}
