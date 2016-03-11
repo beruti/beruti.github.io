@@ -58,6 +58,7 @@ h1, h2, h3, h4, h5{
 .projectP{
   margin: 0 auto;
   width: 100%;
+  color: #fff;
 }
 
 .projectScreenShot{
@@ -66,6 +67,114 @@ h1, h2, h3, h4, h5{
   width: 200px;
   margin: 0 auto;
 }
+
+/*WORK SECTION*/
+#work{
+  height: 720px;
+/*  background-color: #FAB001;
+*/border-bottom: 2px solid blue;
+  border-top:2px solid blue;
+}
+
+#work p {
+  text-decoration: none;
+  font-size: 14px;
+  color: #000000;
+  font-weight: 700;
+  line-height: 20px;
+  font-family: 'Lato',Helvetica,Arial,sans-serif;
+  margin-bottom: 20px;
+}
+
+.projectRow{
+  width: 100%;
+  margin: 0 auto;
+  margin-left: 2%;
+  margin-bottom: 2%
+  height: 360px;
+}
+
+.project{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.project h1 {
+  margin-top: 5px;
+  margin-bottom: 12px;
+}
+
+.project h1 a {
+  font-size: 16px;
+  color: #3C3C3C;
+  font-weight: 700;
+  font-family: 'Lato',Helvetica,Arial,sans-serif;
+}
+
+.project h1 a:hover {
+  text-decoration: none;
+  border-bottom: 2.5px #303030 solid;
+}
+
+/* seperate project colouration*/
+
+/*#project1div{
+  /*purple*/
+/*  background-color: rgb(70,22,108);
+}
+#project2div{
+  background-color: rgb(255,212,84);
+}
+
+#project3div{
+  /*navyblue*/
+/*  background-color: rgb(25,56,146);
+}
+
+#project4div{
+ background-color:rgb(241,104,36); 
+}*/
+
+.projectTitleStrip{
+  background-color: rgba(25,56,146,0.9);
+  height: 50%;
+}
+
+.projectLinks{
+  text-align: center;
+}
+
+.projectLinks li{
+  list-style-type: none;
+  display: inline-block;
+}
+
+.projectLinks a {
+  font-family: 'Lato', Helvetica,Arial,sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #787878;
+  text-decoration: none;
+  border: 2px #787878 solid;
+}
+
+.projectLinks a:hover {
+  text-decoration: none;
+  color: #fff;
+  border-bottom: 2px #787878 solid;
+  background-color: #787878;
+}
+
+.workection p {
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 12px;
+  color: #3C3C3C;
+  margin-top: -5px;
+}
+
 
 /* STICKY NAVIGATION BAR */
 
@@ -354,112 +463,6 @@ h1, h2, h3, h4, h5{
   margin-left: 50px;
 }
 
-/*WORK SECTION*/
-#work{
-  height: 720px;
-/*  background-color: #FAB001;
-*/border-bottom: 2px solid blue;
-  border-top:2px solid blue;
-}
-
-#work p {
-  text-decoration: none;
-  font-size: 14px;
-  color: #000000;
-  font-weight: 700;
-  line-height: 20px;
-  font-family: 'Lato',Helvetica,Arial,sans-serif;
-  margin-bottom: 20px;
-}
-
-.projectRow{
-  width: 100%;
-  margin: 0 auto;
-  margin-left: 2%;
-  margin-bottom: 2%
-  height: 360px;
-}
-
-.project{
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  margin-bottom: 20px;
-  box-sizing: border-box;
-}
-
-.project h1 {
-  margin-top: 5px;
-  margin-bottom: 12px;
-}
-
-.project h1 a {
-  font-size: 16px;
-  color: #3C3C3C;
-  font-weight: 700;
-  font-family: 'Lato',Helvetica,Arial,sans-serif;
-}
-
-.project h1 a:hover {
-  text-decoration: none;
-  border-bottom: 2.5px #303030 solid;
-}
-
-/* seperate project colouration*/
-
-/*#project1div{
-  /*purple*/
-/*  background-color: rgb(70,22,108);
-}
-#project2div{
-  background-color: rgb(255,212,84);
-}
-
-#project3div{
-  /*navyblue*/
-/*  background-color: rgb(25,56,146);
-}
-
-#project4div{
- background-color:rgb(241,104,36); 
-}*/
-
-.projectTitleStrip{
-  background-color: rgba(25,56,146,0.9);
-  height: 50%;
-}
-
-.projectLinks{
-  text-align: center;
-}
-
-.projectLinks li{
-  list-style-type: none;
-  display: inline-block;
-}
-
-.projectLinks a {
-  font-family: 'Lato', Helvetica,Arial,sans-serif;
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #787878;
-  text-decoration: none;
-  border: 2px #787878 solid;
-}
-
-.projectLinks a:hover {
-  text-decoration: none;
-  color: #fff;
-  border-bottom: 2px #787878 solid;
-  background-color: #787878;
-}
-
-.workection p {
-  font-family: Helvetica,Arial,sans-serif;
-  font-size: 12px;
-  color: #3C3C3C;
-  margin-top: -5px;
-}
 
 /*INFORMATION SECTION*/
 #info p {
