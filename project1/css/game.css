@@ -5,8 +5,8 @@
 }
 
 html { 
-  background: url("http://40.media.tumblr.com/aa0823436e400c39d0a6bdbb7999a7f4/tumblr_mv2ndwBfNn1qbrs6lo1_1280.jpg") no-repeat center center fixed; 
- /* OPTIONAL background: url("https://41.media.tumblr.com/3ee7654b4a5f1627056635c1834d2560/tumblr_nekekgHrTN1qbrs6lo1_1280.jpg") no-repeat center center fixed; OPTIONAL */ 
+/*  background: url("http://40.media.tumblr.com/aa0823436e400c39d0a6bdbb7999a7f4/tumblr_mv2ndwBfNn1qbrs6lo1_1280.jpg") no-repeat center center fixed; 
+*/  /*OPTIONAL*/ background: url("https://41.media.tumblr.com/3ee7654b4a5f1627056635c1834d2560/tumblr_nekekgHrTN1qbrs6lo1_1280.jpg") no-repeat center center fixed; /*OPTIONAL */ 
   background-size: 70% 100%;
   background-color: black;
 }
