@@ -19,8 +19,8 @@ h1, h2, h3, h4, h5{
 #landingSegment{
   height: 720px;
   box-sizing: border-box;
-  border-bottom: 2px solid blue;
-  border-top:2px solid blue;
+  border-bottom: 2px solid #f30;
+  border-top:2px solid #f30;
 }
 
 /* longIntroParagraph and work*/
@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5{
 
 /* Project Headers*/
 
-#dannyFoxHeader{
+/*#dannyFoxHeader{
   color: #fff;
   background-color: #000000;
   text-align: center;
@@ -40,11 +40,10 @@ h1, h2, h3, h4, h5{
     background-color: #000000;
     text-align: center;
     padding: 10px;
-}
+}*/
 
 .projectHeader{
-  color: #fff;
-  background-color: #000000;
+  color: #000000;
   text-align: center;
   padding: 10px;
   height: 10%;
@@ -70,10 +69,15 @@ h1, h2, h3, h4, h5{
 
 /*WORK SECTION*/
 #work{
-  height: 720px;
 /*  background-color: #FAB001;
-*/border-bottom: 2px solid blue;
-  border-top:2px solid blue;
+*/border-bottom: 2px solid #f30;
+  border-top:2px solid #f30;
+}
+
+.overrideColumn{
+  padding: 0 10%;
+  height: 50vh;
+  width: 100%;
 }
 
 #work p {
@@ -91,7 +95,6 @@ h1, h2, h3, h4, h5{
   margin: 0 auto;
   margin-left: 2%;
   margin-bottom: 2%
-  height: 360px;
 }
 
 .project{
@@ -100,6 +103,7 @@ h1, h2, h3, h4, h5{
   height: 100%;
   margin-bottom: 20px;
   box-sizing: border-box;
+  border: 2px solid #3C3C3C;
 }
 
 .project h1 {
@@ -130,7 +134,7 @@ h1, h2, h3, h4, h5{
 }
 
 #project3div{
-  /*navyblue*/
+  /*navy#f30*/
 /*  background-color: rgb(25,56,146);
 }
 
@@ -175,6 +179,15 @@ h1, h2, h3, h4, h5{
   margin-top: -5px;
 }
 
+#wdiWorkIntro{
+  padding:0 10%;
+  margin-bottom: 3%;
+}
+
+
+.cardOverride{
+  width: 48%;
+}
 
 /* STICKY NAVIGATION BAR */
 
@@ -302,21 +315,21 @@ h1, h2, h3, h4, h5{
   text-align: center;
 }
 
-#subtitle_list {
+.subtitle_list {
   padding: 0;
   list-style-type: none;
 }
 
-#subtitle_list li {
+.subtitle_list li {
   display: inline-block;
   padding-left: 10px;
 }
 
-#subtitle_list li:nth-child(1) {
+.subtitle_list li:nth-child(1) {
   padding-left: 0;
 }
 
-#subtitle_list a {
+.subtitle_list a {
   font-size: 13px;
   color: #f30;
   font-weight: 700;
@@ -327,7 +340,7 @@ h1, h2, h3, h4, h5{
   padding: 2px;
 }
 
-#subtitle_list a:hover {
+.subtitle_list a:hover {
   text-decoration: none;
   transition: 0.20s ease-out;
   background-color: #f30;
@@ -338,6 +351,22 @@ h1, h2, h3, h4, h5{
   text-decoration: none;
   border-bottom: 2px #f30 solid;
 }
+
+#logo{
+    text-decoration: none;
+    border-bottom: 0;
+    color: #f30;
+}
+
+#logo:hover{
+  text-decoration: none;
+  border-bottom: 0;
+  color: #f30;
+}
+/*
+#landingPageContactLink{
+  margin-top: -30%;
+}*/
 
 /* INDEX PAGE LAYOUT */
 #main {
@@ -364,7 +393,10 @@ h1, h2, h3, h4, h5{
 
 #portfolio_subtitle{
   margin: 20px auto;
+}
 
+#wdiSubtitle{
+  margin-bottom: 3%;
 }
 
 /* -----------------*/
@@ -402,8 +434,8 @@ h1, h2, h3, h4, h5{
 /*  background-color: #009FE3;
 */  height: 720px;
   position: static;
-  border-bottom: 2px solid blue;
-  border-top:2px solid blue;
+  border-bottom: 2px solid #f30;
+  border-top:2px solid #f30;
 }
 
 #longIntroSubDiv{
@@ -432,7 +464,7 @@ h1, h2, h3, h4, h5{
 /*WDI PAGE MAIN*/
 .mainBar {
   border-width: 3px;
-  border-color: #390077;
+  border-color: #f30;
   width: 90px;
   margin: 0;
   padding: 0;
@@ -454,7 +486,7 @@ h1, h2, h3, h4, h5{
 #intro p {
   text-decoration: none;
   font-size: 14px;
-  color: #390077;
+  color: #f30;
   font-weight: bold;
   line-height: 20px;
   font-family: 'Lato',Helvetica,Arial,sans-serif;
@@ -468,7 +500,7 @@ h1, h2, h3, h4, h5{
 #info p {
   text-decoration: none;
   font-size: 14px;
-  color: #390077;
+  color: #f30;
   line-height: 20px;
   font-family: 'Lato',Helvetica,Arial,sans-serif;
   margin-bottom: 20px;
@@ -523,15 +555,15 @@ h1, h2, h3, h4, h5{
     .logo a {
       text-decoration: none;
       font-size: 18px;
-      color: #390077;
+      color: #f30;
       font-weight: 700;
       line-height: 20px;
     }
 
     #logoBar {
       border-width: 2px;
-      border-color: #390077;
-      background-color: #390077;
+      border-color: #f30;
+      background-color: #f30;
       border-style: solid;
       width: 70px;
       margin: 0;
