@@ -6,7 +6,7 @@
 /* MAIN */
 body {
   font-family: 'Lato',Helvetica Neue,Helvetica,Arial,sans-serif;
-  background-color: #fff;
+  background-color: #F2F3F4
   height: 100%;
 }
 
@@ -19,8 +19,8 @@ h1, h2, h3, h4, h5{
 #landingSegment{
   height: 720px;
   box-sizing: border-box;
-  border-bottom: 2px solid #f30;
-  border-top:2px solid #f30;
+/*  border-bottom: 2px solid #f30;
+*/  border-top:2px solid #f30;
 }
 
 /* longIntroParagraph and work*/
@@ -70,14 +70,13 @@ h1, h2, h3, h4, h5{
 /*WORK SECTION*/
 #work{
 /*  background-color: #FAB001;
-*/border-bottom: 2px solid #f30;
+border-bottom: 2px solid #f30;*/
   border-top:2px solid #f30;
 }
 
 .overrideColumn{
   padding: 0 10%;
-  height: 50vh;
-  width: 100%;
+  /*width: 100%;*/
 }
 
 #work p {
@@ -160,23 +159,16 @@ h1, h2, h3, h4, h5{
   font-family: 'Lato', Helvetica,Arial,sans-serif;
   font-size: 12px;
   text-transform: uppercase;
-  color: #787878;
+  color: #f30;
   text-decoration: none;
-  border: 2px #787878 solid;
+  border: 2px #f30 solid;
 }
 
 .projectLinks a:hover {
   text-decoration: none;
   color: #fff;
-  border-bottom: 2px #787878 solid;
-  background-color: #787878;
-}
-
-.workection p {
-  font-family: Helvetica,Arial,sans-serif;
-  font-size: 12px;
-  color: #3C3C3C;
-  margin-top: -5px;
+  border-bottom: 2px #f30 solid;
+  background-color: #f30;
 }
 
 #wdiWorkIntro{
@@ -188,9 +180,9 @@ h1, h2, h3, h4, h5{
   width: 48%;
 }
 
-#portfolioImage1{
+.portfolioImage{
   height: 250px;
-  width: 300px;
+  width: 100%;
 }
 
 #project1{
@@ -371,10 +363,44 @@ h1, h2, h3, h4, h5{
   border-bottom: 0;
   color: #f30;
 }
-/*
-#landingPageContactLink{
-  margin-top: -30%;
-}*/
+
+/*Contact Info Section*/
+
+#contactContainer{
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+#contact{
+  margin: 0 auto;
+  padding-right: 3%;
+}
+
+#contact li{
+  list-style-type: none;
+  padding: 3%;
+}
+
+#contact a{
+  font-size: 13px;
+  color: #f30;
+  font-weight: 700;
+  font-family: 'Lato',Helvetica,Arial,sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px #f30 solid;
+  text-align: center;
+  padding: 2%;
+}
+
+#contact a:hover {
+  text-decoration: none;
+  transition: 0.20s ease-out;
+  background-color: #f30;
+  color: #fff;
+}
+
 
 /* INDEX PAGE LAYOUT */
 #main {
@@ -389,13 +415,11 @@ h1, h2, h3, h4, h5{
 /* SUBTITLE STYLES */
 
 .portfolio_subtitle{
-  font-size: 13px;
-  color: #f30;
   font-weight: 700;
   font-family: 'Lato',Helvetica,Arial,sans-serif;
-  text-transform: uppercase;
   text-decoration: none;
-  display: block;
+  border-bottom: 2px #f30 solid;
+  display: inline-block;
   text-align: center;
 }
 
@@ -595,12 +619,6 @@ h1, h2, h3, h4, h5{
   position: static;
 }
 
-.cardSpacer{
-  height: 10px;
-  width: 100%;
-  background-color:black;
-  position: static;
-}
 
 /*.cardCustom {
   background-color: rgba(65, 65, 65, 0.14);

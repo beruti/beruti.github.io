@@ -5,14 +5,16 @@
   <title>Angus Innes / Home</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="jQuery/jquery.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="bootstrap/js/javascript.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
   <link href="./css/normalize.css" rel="stylesheet">
   <link href="./css/main.css" rel="stylesheet" type="text/css">
   <link href="images/favicon.png" rel="icon" type="image/png">
   <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-  <link href="./css/favicon/boogie" rel="icon" type="image/x-icon" />
+  <link href="http://www.google.com/s2/favicons?domain=www.trackuh.tumblr.com" rel="icon" type="image/x-icon" />
 </head>
 <!-- ******************************************* -->
 <div id="landingSegment">
@@ -26,7 +28,8 @@
     <ul class="subtitle_list">
       <li><a href="#longIntroParagraph">About</a></li>
       <li><a href="#portfolio">Work</a></li>
-      <li><a href="/skills.html">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <!-- <li><a href="/skills.html">Skills</a></li> -->
     <!-- </ul>
     <ul class="subtitle_list" id="landingPageContactLink">
     <a href="#contact"><li><a href="#contact">Contact</a></li>
@@ -37,7 +40,7 @@
 <div id="longIntroParagraph">
   <a name="longIntroParagraph"></a>
   <div id="longIntroSubDiv">
-    <h5 class="portfolio_subtitle">About</h5>
+    <h4 class="portfolio_subtitle">About</h4>
       <p>In 2014 I graduated from Newcastle University with a 2:1 degree in Economics and Business Management. <br><br> I was fascinated by Financial and Behavioural Economics but I left University wanting to build pragmatic skills and broader life experience.<br>
       As a consequence of this I worked and travelled extensively in Australia and India. Working in a solar energy company in Bangalore with Economists and Engineers I found myself drawn to the latter. I soon decided I wanted to create things and have a career that would use my social skills but be defined by a technical ability. <br><br>
       This is what led me to the General Assembly course and I am confident it was the right decision. <br>I love the problem solving aspect and build process of development and continue to marvel at the infinite angles of approach when finding a solution. <br><br> I now look forward to my first job in the Industry and to working in a challenging team environment.</p>
@@ -46,18 +49,18 @@
   <!-- portfolio begins-->
   
   <div id="portfolio" name="portfolio" class="container">
-    <h5 class="portfolio_subtitle" id="wdiSubtitle">Work Completed on WDI</h5>
     <div class="row">
+    <h4 class="portfolio_subtitle" id="wdiSubtitle">Work Completed on WDI</h4>
       <div id="wdiWorkIntro">
-      Four projects each completed in one week after 2 weeks intro.
+      The WDI Course is an intense 12 weeks, taught by Industry professionals. It provides a hands-on learning environment and covered the fundamentals of full-stack web development. I pitched, worked on and presented 4 projects in an agile environment with daily stand ups. 
       </div>
     </div>
     <div class="row"> <!-- id="work" -->
       <!-- project1 card-->
       <div class="col-sm-6 overrideColumn">
         <div class="card" id="project1">
-        <!--card-img-top id="portfolioImage1"-->
-          <img class="img-rounded card-image-top center-block" src="portfolioImages/dannyfoxportfolioimage.png" alt="Card image cap" id="portfolioImage1">
+        <!--card-img-top-->
+          <img class="img-rounded card-image-top center-block portfolioImage" src="portfolioImages/dannyfoxportfolioimage.png" alt="Card image cap">
           <div class="card-block">
             <h4 class="card-title"><strong>Danny Fox's Wild West</strong></h4>
             <h5><i>
@@ -66,33 +69,29 @@
             <p class="card-text">A front-end animated game for 2 players inspired by a Cornish Artist and my first gaming experiences with Aladdin on the Sega MegaDrive. Created using HTML, CSS, JavaScript and jQuery.</p>
             <br>
             <ul class="projectLinks" >
-            <li><a href="https://beruti.github.io/project1/dannyFoxWildWest.html">Project Link</a></li>
+            <li><a href="https://beruti.github.io/project1/dannyFoxWildWest.html">View Website</a></li>
             <li><a href="https://github.com/beruti/Project2">Github Repo</a></li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="cardSpacer">
-      </div>
       <!-- project2 card-->
       <div class="col-sm-6 overrideColumn">
         <div class="card">
-          <img class="img-rounded card-image-top center-block" src="portfolioImages/cabinCollectivePortfolioScreenshot.png" alt="Card image cap" id="portfolioImage1">
+          <img class="img-rounded card-image-top center-block portfolioImage" src="portfolioImages/cabinCollectivePortfolioScreenshot.png" alt="Card image cap">
           <div class="card-block">
             <h4 class="card-title"><strong>Cabin Collective</strong></h4>
             <h5><i>
             Crowd-sourcing collective build projects
             </i></h5>
-            <p class="card-text">A version of Kickstarter for creating cabins. The site is password-protected, built with Ruby on Rails and uses a SQL  database.</p>
+            <p class="card-text">A version of Kickstarter for creating cabins. The site is password-protected, built with Ruby on Rails and uses a SQL  database. Filler for formatting.Filler for formatting.Filler for formatting.Filler for formatting.</p>
             <br>
             <ul class="projectLinks" >
-            <li><a>Project Link</a></li>
+            <li><a>View Website</a></li>
             <li><a href="https://github.com/beruti/Project2">Github Repo</a></li>
             </ul>
           </div>
         </div>
-      </div>
-      <div class="cardSpacer">
       </div>
       <!-- end of row div -->
     </div>
@@ -101,27 +100,25 @@
       <!-- project3 card-->
       <div class="col-sm-6 overrideColumn">
         <div class="card">
-          <img class="img-rounded card-image-top center-block" src="portfolioImages/theForum1.png" alt="Card image cap" id="portfolioImage1">
+          <img class="img-rounded card-image-top center-block portfolioImage" src="portfolioImages/theForum1.png" alt="Card image cap">
           <div class="card-block">
             <h4 class="card-title"><strong>The Forum</strong></h4>
             <h5><i>
             Examining the power of online-communities and long-form content
             </i></h5>
-            <p class="card-text">We paid homage to Reddit for our first group project and built an app with a Node.js API, a NoSQL database and a jQuery/AJAX front-end.</p>
+            <p class="card-text">We paid homage to Reddit for our first group project and built an app with a Node.js API, a NoSQL database and a jQuery/AJAX front-end. Filler for formatting.Filler for formatting.Filler for formatting.Filler for formatting. Filler for formatting.Filler for formatting.</p>
             <br>
             <ul class="projectLinks" >
-            <li><a>Project Link</a></li>
+            <li><a href="http://the-4rum.herokuapp.com">View Website</a></li>
             <li><a href="https://github.com/beruti/Project2">Github Repo</a></li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="cardSpacer">
-      </div>
       <!-- project4 card-->
       <div class="col-sm-6 overrideColumn">
         <div class="card">
-          <img class="img-rounded card-image-top center-block" src="portfolioImages/leChat.png" alt="Card image cap" id="portfolioImage1">
+          <img class="img-rounded card-image-top center-block portfolioImage" src="portfolioImages/leChat.png" alt="Card image cap">
           <div class="card-block">
             <h4 class="card-title"><strong>Real Talk</strong></h4>
             <h5><i>
@@ -130,23 +127,26 @@
             <p class="card-text">For the final project we were to build a full-stack app using any tech we liked. I made a chat app specific to the Houses-of-Parliament with the aim of encouraging individuals to engage with the political process. This was done with Sockets, a Node.js API, MongoDB database and an Angular front-end.</p>
             <br>
             <ul class="projectLinks" >
-            <li><a>Project Link</a></li>
+            <li><a>View Website</a></li>
             <li><a href="https://github.com/beruti/Project2">Github Repo</a></li>
             </ul>
           </div>
         </div>
-      </div>
-      <div class="cardSpacer">
       </div>
       <!-- end of row2-->
     </div>
     <!-- end of portfolio div -->
   </div>
   <!-- Contact Details-->
-  <div class="card" id="contact">
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Email</li>
-      <li class="list-group-item">Github</li>
-    </ul>
+  <div class="container" id="contactContainer">
+    <h4 class="portfolio_subtitle">Contact Me</h4>
+    <div class="card" id="contact">
+      <ul>
+        <li><a href="mailto:hi@angus-innes.com">hi@angus-innes.com</a></li>
+        <li><a href="https://uk.linkedin.com/in/angusinnes" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/beruti" target="_blank">GitHub</a></li>
+        <li><a href="https://twitter.com/anguscinnes" target="_blank">Twitter</a></li>
+      </ul>
+    </div>
   </div>
 </html>
