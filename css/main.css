@@ -14,13 +14,23 @@ h1, h2, h3, h4, h5{
   letter-spacing: 0.02em;
 }
 
+#topLine {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 6px;
+    background: #f30;
+    z-index: 2;
+}
+
 /* Segments */
 
 #landingSegment{
   height: 720px;
   box-sizing: border-box;
 /*  border-bottom: 2px solid #f30;
-*/  border-top:2px solid #f30;
+  border-top:2px solid #f30; */
 }
 
 /* longIntroParagraph and work*/
