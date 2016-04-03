@@ -348,7 +348,7 @@ border-bottom: 2px solid #f30;*/
 }
 
 #wdiSubtitle{
-  margin-bottom: 3%;
+  margin: 3% 0%;
 }
 
 /* -----------------*/
@@ -378,16 +378,22 @@ border-bottom: 2px solid #f30;*/
   font-family: 'Lato', Helvetica,Arial,sans-serif; 
 }
 
-#longIntroParagraph{
+#aboutMe{
   font-size: 13px;
   color: #000000;
-  text-align: center;
+  text-align: justify;
   font-family: 'Lato', Helvetica,Arial,sans-serif; 
 /*  background-color: #009FE3;
 */  height: 720px;
   position: static;
   border-bottom: 2px solid #f30;
   border-top:2px solid #f30;
+}
+
+#aboutMeTitle{
+  text-align: center;
+  margin-left: 47%;
+  margin-bottom: 3%;
 }
 
 #longIntroSubDiv{
@@ -398,7 +404,7 @@ border-bottom: 2px solid #f30;*/
 /*About Paragraph*/
 
 #aboutParagraph{
-  margin: 0 4%;
+  margin: 0 10%;
 }
 
 /* INDEX PAGE SOCIAL LINKS */
