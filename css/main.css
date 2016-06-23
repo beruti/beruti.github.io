@@ -13,8 +13,8 @@ h1, h2, h3, h4, h5{
 /*Intro page*/
 
 #introContainer{
-  border-style: solid;
-  border-color: #f30;
+/*  border-style: solid;
+  border-color: #f30;*/
   padding: 20%;
   text-align: center;
   text-decoration: none;
