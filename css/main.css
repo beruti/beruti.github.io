@@ -362,7 +362,8 @@ border-bottom: 2px solid #f30;*/
   font-size: 13px;
   color: #000000;
   text-align: center;
-  font-family: 'Lato', Helvetica,Arial,sans-serif; 
+  font-family: 'Lato', Helvetica,Arial,sans-serif;
+  margin: 0 30%; 
 }
 
 #aboutMe{
