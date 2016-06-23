@@ -33,24 +33,6 @@ h1, h2, h3, h4, h5{
   border-top:2px solid #f30; */
 }
 
-/* longIntroParagraph and work*/
-
-
-/* Project Headers*/
-
-/*#dannyFoxHeader{
-  color: #fff;
-  background-color: #000000;
-  text-align: center;
-  padding: 10px;
-}
-
-#cabinCollectiveHeader{
-    color: #fff;
-    background-color: #000000;
-    text-align: center;
-    padding: 10px;
-}*/
 
 .projectHeader{
   color: #000000;
@@ -555,6 +537,111 @@ border-bottom: 2px solid #f30;*/
 }
 
 
+/*---- FLEX SETTINGS ----*/
+.row{
+  /*use border box - box model of margin, border, padding */
+  box-sizing: border-box;
+  /*attach all prefixes for cross browser compatibility*/
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  /*KEY LINE invoke the use of flexbox*/
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+/*  flex property is used to size the items that are being affected*/ 
+  flex: 0 1 auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  /*set direction of boxes being influenced by flex to horizontal left to right orientation*/
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  /*wrap the content in the boxes being effected by flex*/
+  flex-wrap: wrap;
+  /*set the margin to 0.5 of a rem - a fraction of the root elements font size*/
+  margin-right: -.5rem;
+  margin-left: -.5rem;
+}
+
+/*cover all the grid system sizings*/
+.col-xs, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-offset-1, .col-xs-offset-10, .col-xs-offset-11, .col-xs-offset-12, .col-xs-offset-2, .col-xs-offset-3, .col-xs-offset-4, .col-xs-offset-5, .col-xs-offset-6, .col-xs-offset-7, .col-xs-offset-8, .col-xs-offset-9{
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  /*flex basis is the initial main size of the flex item - this also determines the size of the content-box unless specififed otherwise using box-sizing*/
+  flex-basis: 100%;
+  /* never stretch the image beyond its capacity*/
+  max-width: 100%;  
+/*  border-box means that the box is set to the border and padding settings of the element naturally but not the margins - eg if you set the width to a certain amount of pixels then add a border of a certain amount of pixels then the border pixels will be added but as a proportion of the image size which will remain unchanged*/
+  box-sizing: border-box;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  /*same as flex: none;*/
+  flex: 0 0 auto;
+  padding-right: .5rem;
+  padding-left: .5rem;
+}
+
+
+.box, .box-first, .box-large, .box-nested, .box-row {
+position: relative;
+box-sizing: border-box;
+min-height: 1rem;
+margin-bottom: 0;
+/*background: #f9ada0;*/
+background: #fff;
+border: 1px solid #FFF;
+/*border-radius: 2px;*/
+/*hide text if it flows outside the set parameters of container*/
+/*overflow: hidden;*/
+/*better to show so no issues across browsers*/
+overflow: visible;
+text-align: left;
+color: black;
+}
+
+/* flex box setting to add spacing around box elements*/
+.around-xs{
+-webkit-justify-content: space-around;
+-ms-flex-pack: distribute;
+justify-content: space-around;
+}
+
+/*a column spanning a sixth of the page in grid terms*/
+.col-xs-2 {
+-webkit-flex-basis: 16.667%;
+-ms-flex-preferred-size: 16.667%;
+/*span 2/12ths of the page in grid terms*/
+flex-basis: 16.667%;
+max-width: 16.667%;
+}
+
+/*a column spanning all 12ths of the page in grid terms*/
+.col-xs-12 {
+-webkit-flex-basis: 100%;
+-ms-flex-preferred-size: 100%;
+/*span all 12ths of the page in grid terms*/
+flex-basis: 100%;
+max-width: 100%;
+}
+
+#row2{
+  margin-top: 5%;
+}
+
+
+/*SETTING UP RESPONSIVE DESIGN - STACK WHEN ON MOBILE */
+/*When the screen (browser window) gets smaller than 768px, each column should have a width of 100%:*/
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-xs-"] {
+        width: 100%;
+    }
+}
 /*.cardCustom {
   background-color: rgba(65, 65, 65, 0.14);
   padding: 20px;
