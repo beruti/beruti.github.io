@@ -16,7 +16,24 @@ h1, h2, h3, h4, h5{
 
 #hyperlinkUnderline{
   border-bottom: 2px #f30 solid;
+  color: black;
 }
+
+#hyperlinkUnderline{
+  border-bottom: 2px #f30 solid;
+  color:black;
+}
+
+a !important{
+    color:black;
+    text-decoration: none;
+}
+
+a:hover {
+  color:black;
+  text-decoration: none;
+}
+
 
 #topLine {
     position: fixed;
