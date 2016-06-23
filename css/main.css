@@ -14,6 +14,10 @@ h1, h2, h3, h4, h5{
   letter-spacing: 0.02em;
 }
 
+#hyperlinkUnderline{
+  border-bottom: 2px #f30 solid;
+}
+
 #topLine {
     position: fixed;
     top: 0;
