@@ -1,6 +1,6 @@
-/**{
+*{
   border: dotted 1px black;
-}*/
+}
 
 
 /* MAIN */
@@ -374,7 +374,6 @@ border-bottom: 2px solid #f30;*/
 /* LOGO */
 .logo {
   margin-top: 40vh;
-  margin-bottom: 25px;
   text-align: center;
   text-decoration: none;
   font-size: 17px;
@@ -538,6 +537,18 @@ border-bottom: 2px solid #f30;*/
       line-height: 20px;
     }
 
+    #logoLayerClose{
+      border: 1% #f30;
+      height: 2%
+      width: 2%;
+    }
+
+    #logoLayerFar{
+      border: 1% #f30;
+      height: 2%
+      width: 2%;
+    }
+
     #logoBar {
       border-width: 2px;
       border-color: #f30;
@@ -661,7 +672,6 @@ max-width: 100%;
 #row2{
   margin-top: 5%;
 }
-
 
 /*SETTING UP RESPONSIVE DESIGN - STACK WHEN ON MOBILE */
 /*When the screen (browser window) gets smaller than 768px, each column should have a width of 100%:*/
