@@ -10,6 +10,29 @@ h1, h2, h3, h4, h5{
   letter-spacing: 0.02em;
 }
 
+/*Intro page*/
+
+#introContainer{
+  border-style: solid;
+  border-color: #f30;
+  padding: 20%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  color: #f30;
+  font-weight: 700;
+  line-height: 27px;
+  font-family: 'Lato', Helvetica,Arial,sans-serif;
+}
+
+#introParagraph{
+  font-size: 13px;
+  color: #000000;
+  text-align: center;
+  font-family: 'Lato', Helvetica,Arial,sans-serif;
+  margin: 0 30%; 
+}
+
 .hyperlinkUnderline{
   border-bottom: 2px #f30 solid;
   color: black;
@@ -35,15 +58,57 @@ a:hover {
     z-index: 2;
 }
 
-/* Segments */
-
-#landingSegment{
-  height: 720px;
-  box-sizing: border-box;
-/*  border-bottom: 2px solid #f30;
-  border-top:2px solid #f30; */
+#landingPageTitle{
+    text-decoration: none;
+    border-bottom: 0;
+    color: #f30;
 }
 
+#landingPageTitle:hover{
+  text-decoration: none;
+  border-bottom: 0;
+  color: #f30;
+}
+
+#landingPageSubtitle{
+    text-decoration: none;
+    border-bottom: 0;
+    color: #f30;
+}
+
+#landingPageSubitle:hover{
+  text-decoration: none;
+  border-bottom: 0;
+  color: #f30;
+}
+
+/* INDEX PAGE INTRO PARAGRAPH */
+
+#aboutMe{
+  font-size: 13px;
+  color: #000000;
+  text-align: justify;
+  font-family: 'Lato', Helvetica,Arial,sans-serif; 
+/*  background-color: #009FE3;
+*/  height: 720px;
+  position: static;
+  border-bottom: 2px solid #f30;
+  border-top:2px solid #f30;
+}
+
+#aboutMeTitle{
+  text-align: center;
+  margin-left: 47%;
+  margin-bottom: 3%;
+}
+
+#longIntroSubDiv{
+  position: absolute;
+  margin-top: 180px;
+}
+
+
+/* Segments */
 
 .projectHeader{
   color: #000000;
@@ -126,23 +191,6 @@ border-bottom: 2px solid #f30;*/
 }
 
 /* seperate project colouration*/
-
-/*#project1div{
-  /*purple*/
-/*  background-color: rgb(70,22,108);
-}
-#project2div{
-  background-color: rgb(255,212,84);
-}
-
-#project3div{
-  /*navy#f30*/
-/*  background-color: rgb(25,56,146);
-}
-
-#project4div{
- background-color:rgb(241,104,36); 
-}*/
 
 .projectTitleStrip{
   background-color: rgba(25,56,146,0.9);
@@ -269,29 +317,6 @@ border-bottom: 2px solid #f30;*/
   border-bottom: 2px #f30 solid;
 }
 
-#landingPageTitle{
-    text-decoration: none;
-    border-bottom: 0;
-    color: #f30;
-}
-
-#landingPageTitle:hover{
-  text-decoration: none;
-  border-bottom: 0;
-  color: #f30;
-}
-
-#landingPageSubtitle{
-    text-decoration: none;
-    border-bottom: 0;
-    color: #f30;
-}
-
-#landingPageSubitle:hover{
-  text-decoration: none;
-  border-bottom: 0;
-  color: #f30;
-}
 
 /*Contact Info Section*/
 
@@ -365,50 +390,6 @@ border-bottom: 2px solid #f30;*/
 
 #portfolio_container{
   display: block;
-}
-
-/* LOGO */
-.logo {
-  margin-top: 40vh;
-  text-align: center;
-  text-decoration: none;
-  font-size: 17px;
-  color: #f30;
-  font-weight: 700;
-  line-height: 27px;
-  font-family: 'Lato', Helvetica,Arial,sans-serif;
-}
-
-/* INDEX PAGE INTRO PARAGRAPH */
-#introParagraph{
-  font-size: 13px;
-  color: #000000;
-  text-align: center;
-  font-family: 'Lato', Helvetica,Arial,sans-serif;
-  margin: 0 30%; 
-}
-
-#aboutMe{
-  font-size: 13px;
-  color: #000000;
-  text-align: justify;
-  font-family: 'Lato', Helvetica,Arial,sans-serif; 
-/*  background-color: #009FE3;
-*/  height: 720px;
-  position: static;
-  border-bottom: 2px solid #f30;
-  border-top:2px solid #f30;
-}
-
-#aboutMeTitle{
-  text-align: center;
-  margin-left: 47%;
-  margin-bottom: 3%;
-}
-
-#longIntroSubDiv{
-  position: absolute;
-  margin-top: 180px;
 }
 
 /*About Paragraph*/
