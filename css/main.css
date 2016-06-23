@@ -14,14 +14,9 @@ h1, h2, h3, h4, h5{
   letter-spacing: 0.02em;
 }
 
-#hyperlinkUnderline{
+.hyperlinkUnderline{
   border-bottom: 2px #f30 solid;
   color: black;
-}
-
-#hyperlinkUnderline{
-  border-bottom: 2px #f30 solid;
-  color:black;
 }
 
 a !important{
@@ -34,13 +29,12 @@ a:hover {
   text-decoration: none;
 }
 
-
 #topLine {
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
-    height: 6px;
+    height: 1%;
     background: #f30;
     z-index: 2;
 }
@@ -279,13 +273,25 @@ border-bottom: 2px solid #f30;*/
   border-bottom: 2px #f30 solid;
 }
 
-#logo{
+#landingPageTitle{
     text-decoration: none;
     border-bottom: 0;
     color: #f30;
 }
 
-#logo:hover{
+#landingPageTitle:hover{
+  text-decoration: none;
+  border-bottom: 0;
+  color: #f30;
+}
+
+#landingPageSubtitle{
+    text-decoration: none;
+    border-bottom: 0;
+    color: #f30;
+}
+
+#landingPageSubitle:hover{
   text-decoration: none;
   border-bottom: 0;
   color: #f30;
@@ -371,7 +377,7 @@ border-bottom: 2px solid #f30;*/
   margin-bottom: 25px;
   text-align: center;
   text-decoration: none;
-  font-size: 26px;
+  font-size: 17px;
   color: #f30;
   font-weight: 700;
   line-height: 27px;
