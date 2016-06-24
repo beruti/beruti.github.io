@@ -330,11 +330,17 @@ border-bottom: 2px solid #f30;*/
 #contact{
   margin: 0 auto;
   padding-right: 3%;
+  display: flex;
+  justify-content: center;
 }
 
 #contact li{
   list-style-type: none;
-  padding: 3%;
+  height: 12vh;
+  width: 20vw;
+  display: flex;
+  flex-basis: auto;
+  flex-direction: column;
 }
 
 #contact a{
@@ -346,7 +352,11 @@ border-bottom: 2px solid #f30;*/
   text-decoration: none;
   border: 2px #f30 solid;
   text-align: center;
-  padding: 2% 13%;
+  padding: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 #contact a:hover {
@@ -369,22 +379,23 @@ border-bottom: 2px solid #f30;*/
 
 /* SUBTITLE STYLES */
 
-.portfolio_subtitle{
+.h3Subtitle{
   font-weight: 700;
   font-family: 'Lato',Helvetica,Arial,sans-serif;
   text-decoration: none;
   border-bottom: 2px #f30 solid;
   display: inline-block;
   text-align: center;
+  margin: 2vh auto;
 }
 
-#portfolio_subtitle{
+/*#portfolioSubtitle{
   margin: 20px auto;
 }
 
 #wdiSubtitle{
-  margin: 3% 0%;
-}
+  margin: 4vh auto;
+}*/
 
 /* -----------------*/
 
@@ -400,8 +411,10 @@ border-bottom: 2px solid #f30;*/
 
 /* INDEX PAGE SOCIAL LINKS */
 #socialLinks ul {
-  padding: 0;
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #socialLinks li a {
@@ -539,6 +552,14 @@ border-bottom: 2px solid #f30;*/
 
 }
 
+/*CORRECTING BOOTSTRAP*/
+
+.container !important{
+  margin: 0 auto;
+  padding: 0;
+}
+
+
 /*=============Portfolio Setting==========*/
 /*-------------Card Styling--------------*/
 .card-img-top {
@@ -658,21 +679,4 @@ max-width: 100%;
         width: 100%;
     }
 }
-/*.cardCustom {
-  background-color: rgba(65, 65, 65, 0.14);
-  padding: 20px;
-  border: 3px solid rgba(255, 255, 255, 0.83);
-  margin-left: -2px;
-  margin-bottom: -2px;
-}
-
-.card-title {
-  margin-top: 0px;
-  margin-bottom: 20px;
-}
-
-.newline {
-  display: block;
-  margin-top: 5px;
-}
-/*-----------------------------------------*/*/
+---------------------------------------*/*/
