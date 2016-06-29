@@ -10,6 +10,14 @@ h1, h2, h3, h4, h5{
   letter-spacing: 0.02em;
 }
 
+ol, ul{
+  display: flex;
+  flex-basis: auto;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
 /*Intro page*/
 
 #introContainer{
@@ -214,7 +222,7 @@ border-bottom: 2px solid #f30;*/
   color: #f30;
   text-decoration: none;
   border: 2px #f30 solid;
-  padding: 2px;
+  padding: 5px;
 }
 
 .projectLinks a:hover {
@@ -222,7 +230,7 @@ border-bottom: 2px solid #f30;*/
   color: #fff;
   border-bottom: 2px #f30 solid;
   background-color: #f30;
-  padding: 2px;
+  padding: 5px;
 }
 
 #project3Links{
@@ -328,7 +336,6 @@ border-bottom: 2px solid #f30;*/
 
 #contact{
   margin: 0 auto;
-  padding-right: 3%;
   display: flex;
   justify-content: center;
 }
@@ -385,7 +392,7 @@ border-bottom: 2px solid #f30;*/
   border-bottom: 2px #f30 solid;
   display: inline-block;
   text-align: center;
-  margin: 2vh auto;
+  margin: 6vh auto;
 }
 
 /*#portfolioSubtitle{
