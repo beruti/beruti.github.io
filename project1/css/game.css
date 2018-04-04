@@ -4,9 +4,9 @@
 	font-family: 'Slabo 27px', serif;
 }
 
-html { 
-/*  background: url("http://40.media.tumblr.com/aa0823436e400c39d0a6bdbb7999a7f4/tumblr_mv2ndwBfNn1qbrs6lo1_1280.jpg") no-repeat center center fixed; 
-*/  /*OPTIONAL*/ background: url("https://41.media.tumblr.com/3ee7654b4a5f1627056635c1834d2560/tumblr_nekekgHrTN1qbrs6lo1_1280.jpg") no-repeat center center fixed; /*OPTIONAL */ 
+html {
+/*  background: url("http://40.media.tumblr.com/aa0823436e400c39d0a6bdbb7999a7f4/tumblr_mv2ndwBfNn1qbrs6lo1_1280.jpg") no-repeat center center fixed;
+*/  /*OPTIONAL*/ background: url("https://41.media.tumblr.com/3ee7654b4a5f1627056635c1834d2560/tumblr_nekekgHrTN1qbrs6lo1_1280.jpg") no-repeat center center fixed; /*OPTIONAL */
   background-size: 70% 100%;
   background-color: black;
 }
@@ -23,10 +23,10 @@ h2{
 	display: inline-block;
 }
 
-.a, .b, .c, .d, .e, .f, .g, .h, .riki{
+.a, .b, .c, .d, .e, .f, .g, .billy, .riki{
 width:80px;
 height:80px;
-position:fixed; 
+position:fixed;
 margin:20px;
 border-radius: 50%;
 align-content:center;
@@ -42,7 +42,7 @@ div#instructionScreen{
 	position:relative;
 }
 
-/* TO DO 
+/* TO DO
 https://css-tricks.com/the-blur-up-technique-for-loading-background-images/
 */
 
@@ -114,11 +114,3 @@ div.endScreenShow{
 	-webkit-filter: blur(3px);
 	filter: blur(3px);
 }
-
-
-
-
-
-
-
-

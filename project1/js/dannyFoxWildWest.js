@@ -1,41 +1,78 @@
 $(document).ready(function(){
- 
+
   //-----------------------------------------------
-  //---------Player----Comparison------------------
+  //---------Initial Conditions------------------
   //-----------------------------------------------
 
-  var player1 = {
-    score: null
+  //create player objects
+  //with score counters set to zero
+  var player1 = {score: null};
+  var player2 = {score: null};
+
+  var startSound;
+  var gunSound;
+  var keepRunning = true;
+  var secondPlayerAnimate = false;
+  function startEverything(){
+    animateTargetImages();
+    setUpEventListeners();
+    theFinalCountDown();
+    playBackingMusic();
+    hideInstructions();
   };
-  //console.log(player1);
 
-  // is an object
-  var player2 = {
-    score: null
-  }
+  function startEverythingForPlayer2(){
+      hideScoreForSecondRound();
+      animateTargetImages();
+      setUpEventListeners();
+      theSecondFinalCountDown();
+      playBackingMusic();
+    };
 
+  $('.startButton').click(startEverything);
 
+  //------------------------------------------------
+  //-------IMPORT SOUND MANAGER LIBRARY-------------
+  //--------Configure Background Music--------------
+
+  soundManager.setup({
+    url: 'soundmanager/swf',
+    flashVersion: 9,
+    onready: function() {
+      // Ready to use; soundManager.createSound() etc. can now be called.
+      console.log("soundmanager ready");
+    }
+  });
+
+  function playBackingMusic(){
+    if (keepRunning ===true || secondPlayerAnimate === true) {
+      startSound = soundManager.createSound({
+        //create sound object
+        url: 'gamemusic/aladdin/FriendLikeMe.mp3'
+      }).play();
+    }
+  };
   //------------------------------------------------
   // Div instructions and score - function to hide on beginning
   //------------------------------------------------
 
-  function InstructionsHider() {
+  function hideInstructions() {
     $("div#instructionScreen").hide();
   }
 
-  function scoreShow() {
-    $("div.score").addClass("endScreenShow"); 
-    $("div.score").removeClass("score");
+  function showScoreToggle() {
+    $("div#scoreContainer").addClass("endScreenShow");
+    $("div#scoreContainer").removeClass("score");
   }
 
-  function HideScoreForSecondRound(){
+  function hideScoreForSecondRound(){
     $("div#scoreContainer").removeClass("endScreenShow");
-    $("div#scoreContainer").addClass("score"); 
+    $("div#scoreContainer").addClass("score");
     $(".target").show();
   }
 
   //-----------------------------------------
-  //------------PLAYER score COMPARISON------
+  //------------Decide Winner By Score Comparison------
   //-----------------------------------------
 
   var winner = null;
@@ -48,90 +85,50 @@ $(document).ready(function(){
   };
   console.log(winner)
 
-  //-----------------------------------------------
-  //---------IGNITION----KEY-----------------------
-  //-----------------------------------------------
-  var startSound;    
-  var gunSound; 
-  var keeprunning = true;
-  var secondPlayerAnimate = false;
-  var startEverything = function startEverything(){
-    animateImageA();
-    animateImageB();
-    animateImageC();
-    animateImageD();
-    animateImageE();
-    animateImageF();
-    animateImageG();
-    animateImageH();
-    animateImageRiki();
-    setUpEventListners(); 
-    theFinalCountDown();
-    playIntro();
-    InstructionsHider();
-  };
 
- var startEverythingForPlayer2 = function startEverythingForPlayer2(){
-      HideScoreForSecondRound(); 
-      animateImageA();
-      animateImageB();
-      animateImageC();
-      animateImageD();
-      animateImageE();
-      animateImageF();
-      animateImageG();
-      animateImageH();
-      animateImageRiki();
-      setUpEventListners(); 
-      theSecondFinalCountDown();
-      playIntro();
 
-    };
-  
-  $('.startButton').click(startEverything);     
-  
   //-----------------------------------------
   //------------CLICK AND SCORE--------------
   //-----------------------------------------
-  
-  function setUpEventListners() {
+
+  function setUpEventListeners() {
     var targets;
-    if (keeprunning === true) {
+    if (keepRunning === true) {
       targets = 0;
       var collectedItemsDisplayPanel = $('#scoreDisplay');
-      var endScreenShow = $("#scoreContainer");   
+      var endScreenShow = $("#scoreContainer");
     //  console.log(endScreenShow);
       $('.target').click(function(){
         var pointsToAdd = $(this).data("points");
         // ----gun-sound-------
          gunSound = soundManager.createSound({                                                            //create sound object
          url: 'gamemusic/pistolSound.mp3'
-         }).play(); 
+         }).play();
         //-------score--counter--
         targets +=pointsToAdd;
         //console.log(targets);
         player1.score=targets;
         //console.log(player1.score);
         //-------display---------
-        collectedItemsDisplayPanel.html(" Score " + targets); 
+        collectedItemsDisplayPanel.html(" Score " + targets);
        //---Setting-end-screen---
        endScreenShow.html("<p>Score " + targets + "</p>" + "<button class='startButton' >" + "</button>").css("margin","auto");
        //removes element from page when clicked and score already logged
-       $(this).hide(); 
-       
+       $(this).hide();
+
       });
-    } else { 
+    } else {
 
       targets = 0;
       var collectedItemsDisplayPanel = $('#scoreDisplay');
-      var endScreenShow = $("#scoreContainer");   
+      var endScreenShow = $("#scoreContainer");
       $('.target').off();
       $('.target').click(function() {
         var pointsToAdd = $(this).data("points");
         // ----gun-sound-------
         gunSound = soundManager.createSound({ //create sound object
           url: 'gamemusic/pistolSound.mp3'
-        }).play(); 
+        }).play();
         //-------score--counter--
         targets +=pointsToAdd;
         player2.score=targets;
@@ -145,12 +142,12 @@ $(document).ready(function(){
         endScreenShow.html("<p>Score " + targets + "</p>" + "<p>" + winner + "</p>" + "<button class='startButton'>" + "</button>");
 
         //removes element from page when clicked and score already logged
-        $(this).remove(); 
+        $(this).remove();
 
-      });        
+      });
     }
 
-  }; 
+  };
 
   //------------------------------------------------
   //-------MAKING TIMER + TIMEOUT FUNCTIONS---------
@@ -158,165 +155,169 @@ $(document).ready(function(){
 
   function theFinalCountDown(){
     var timerDisplay = $("#timerDisplay");
-    var timeCounter= 10;
+    var timeInSeconds= 10;
     var countDownInterval = window.setInterval(function(){
-      timeCounter--;
-      timerDisplay.html("Timer " + timeCounter);
+      timeInSeconds--;
+      timerDisplay.html("Timer " + timeInSeconds);
 
-      if(timeCounter<1){
+      if(timeInSeconds<1){
         clearInterval(countDownInterval);
         // call function that stops everything
-        keeprunning = false;
+        keepRunning = false;
         startSound.stop();
         secondPlayerAnimate = true;
         // clears screen of objects when time runs out
-        $('.target').hide();        
+        $('.target').hide();
         $('.startButton').html("PLAYER2");
        //Show the score div
-       scoreShow();
+       showScoreToggle();
 
         $('.startButton').click(startEverythingForPlayer2);
-        } 
+        }
     }, 1000);
   };
 
   function theSecondFinalCountDown(){
     var timerDisplay = $("#timerDisplay");
-    var timeCounter= 10;
+    var timeInSeconds= 10;
     var countDownInterval = window.setInterval(function(){
-      timeCounter--;
-      //console.log(timeCounter); // shows the counter reducing - lets put this in a physical element on the page
-      timerDisplay.html("Timer " + timeCounter);
+      timeInSeconds--;
+      //console.log(timeInSeconds); // shows the counter reducing - lets put this in a physical element on the page
+      timerDisplay.html("Timer " + timeInSeconds);
 
-      if(timeCounter<1){
+      if(timeInSeconds<1){
         clearInterval(countDownInterval);
         // call function that stops everything
         startSound.stop();
         // clears screen of objects when time runs out
-        $('.target').remove();  
+        $('.target').remove();
         //Show the score div
-        scoreShow();
+        showScoreToggle();
         //getWinner();
         //changes functionality of start button to refresh page
         $('.startButton').html("PLAY AGAIN?");
-        $('.startButton').click(function(){ document.location.href=""; });  
-      
-        } 
+        $('.startButton').click(function(){ document.location.href=""; });
+
+        }
     }, 1000);
 
   };
 
-  //------------------------------------------- 
+  //-------------------------------------------
   //------------------ANIMATION----------------
   //-------------------------------------------
 
-  function makeNewPosition() {                                                 
-      
+  function makeNewPosition() {
+
       var H = $(window).height() - 50;
       var W = $(window).width() - 50;
-      
-      var newH = Math.floor(Math.random() * H);                               
-      var newW = Math.floor(Math.random() * W);                                 
-      
-      return [newH,newW];                                                         
-      
+
+      var newH = Math.floor(Math.random() * H);
+      var newW = Math.floor(Math.random() * W);
+
+      return [newH,newW];
+
   };
-  // is currently moving within the right dimensions but starting from wrong point
-  //-----------------------------------------------------    
-  //-------------------FOR EACH IMAGE--------------------
+  
   //-----------------------------------------------------
-
-  function animateImageA() {      
-    if (keeprunning === true || secondPlayerAnimate === true) {                                      
-      $('.a').animate({top: makeNewPosition()[0], left: makeNewPosition()[1] }, 3000, function() {   // console.log('a');          
-        animateImageA();
+  //-------------------FOR EACH IMAGE--------------------
+  // issue that if you make it a single function, the images all move together 
+  //-----------------------------------------------------
+  function animateBillyTarget() {
+    if (keepRunning === true || secondPlayerAnimate === true) {
+      $('.billy').animate({top: makeNewPosition()[0], left: makeNewPosition()[1] }, 3000, function() {   // console.log('a');
+        animateBillyTarget();
       });
     }
   };
-   
-  function animateImageB() { 
-    if (keeprunning === true || secondPlayerAnimate === true) {
+
+  function animateTargetImageA() {
+    if (keepRunning === true || secondPlayerAnimate === true) {
+      $('.a').animate({top: makeNewPosition()[0], left: makeNewPosition()[1] }, 1000, function() {
+        animateTargetImageB();
+      });
+    }
+  };
+
+  function animateTargetImageB() {
+    if (keepRunning === true || secondPlayerAnimate === true) {
       $('.b').animate({top: makeNewPosition()[0], left: makeNewPosition()[1] }, 1000, function() {
-        animateImageB();
+      animateTargetImageC();
       });
-    }                                                 
+    }
   };
 
-  function animateImageC() { 
-    if (keeprunning === true || secondPlayerAnimate === true) {
-      $('.c').animate({top: makeNewPosition()[0], left: makeNewPosition()[1] }, 1000, function() { 
-      animateImageC();
+  function animateTargetImageC() {
+    if (keepRunning === true || secondPlayerAnimate === true) {
+      $('.c').animate({top: makeNewPosition()[0], left: makeNewPosition()[1] }, 1000, function() {
+        animateTargetImageD();
       });
-    }                                                 
+    }
   };
 
-  function animateImageD() {
-    if (keeprunning === true || secondPlayerAnimate === true) {
-      $('.d').animate({top: makeNewPosition()[0], left: makeNewPosition()[1] }, 1000, function() { 
-        animateImageD();
+  function animateTargetImageD() {
+    if (keepRunning === true || secondPlayerAnimate === true) {
+      $('.d').animate({top: makeNewPosition()[0], left: makeNewPosition()[1] }, 1000, function() {
+        animateTargetImageE();
       });
-    }                                                 
-  }; 
+    }
+  };
 
-  function animateImageE() {
-    if (keeprunning === true || secondPlayerAnimate === true) {
+  function animateTargetImageE() {
+    if (keepRunning === true || secondPlayerAnimate === true) {
       $('.e').animate({top: makeNewPosition()[0], left: makeNewPosition()[1] }, 1000, function() {
-        animateImageE();
+        animateTargetImageF();
       });
-    }                                                 
-  };  
+    }
+  };
 
-  function animateImageF() {       
-    if (keeprunning === true || secondPlayerAnimate === true) {                                      
+  function animateTargetImageF() {
+    if (keepRunning === true || secondPlayerAnimate === true) {
       $('.f').animate({top: makeNewPosition()[0], left: makeNewPosition()[1] }, 1000, function() {
-        animateImageF();
+        animateTargetImageG();
       });
     }
   };
 
-  function animateImageG() {       
-    if (keeprunning === true || secondPlayerAnimate === true) {                                      
+  function animateTargetImageG() {
+    if (keepRunning === true || secondPlayerAnimate === true) {
       $('.g').animate({top: makeNewPosition()[0], left: makeNewPosition()[1] }, 1000, function() {
-        animateImageG();
+        animateTargetImageH();
       });
     }
   };
 
-  function animateImageH() {       
-    if (keeprunning === true || secondPlayerAnimate === true) {                                      
-      $('.h').animate({top: makeNewPosition()[0], left: makeNewPosition()[1] }, 1000, function() {
-        animateImageH();
+  function animateTargetImageRiki() {
+    if (keepRunning === true || secondPlayerAnimate === true) {
+      $('.riki').animate({top: makeNewPosition()[0], left: makeNewPosition()[1] }, 333, function() {
+        animateTargetImageRiki();
       });
     }
   };
 
-  function animateImageRiki() {       
-    if (keeprunning === true || secondPlayerAnimate === true) {                                      
-      $('.riki').animate({top: makeNewPosition()[0], left: makeNewPosition()[1] }, 333, function() {  
-        animateImageRiki();
-      });
-    }
-  };  
-   
-  //------------------------------------------------
-  //-------INPUT SOUND MANAGER LIBRARY-------------- 
-  //----------- + --Background Music----------------
+  // var imageClassArray = [".a", ".b", ".g"]
+  // function animateTargetImage(){
+  //   for (i=0; i<imageClassArray.length; i++){
+  //     if (keepRunning === true || secondPlayerAnimate === true) {
+  //       console.log("'" + imageClassArray[i] + "'")
+  //       $("'" + imageClassArray[i] + "'").animate({top: makeNewPosition()[0], left: makeNewPosition()[1] }, 333, function() {
+  //         animateTargetImage();
+  //       });
+  //     }
+  //   }
+  // }
 
-  soundManager.setup({
-    url: 'soundmanager/swf',
-    flashVersion: 9, 
-    onready: function() {
-      // Ready to use; soundManager.createSound() etc. can now be called.
-      console.log("soundmanager ready");  
-    }
-  });
+  function animateTargetImages(){
+    animateBillyTarget();
+    // animateTargetImage();
+    animateTargetImageA();
+    animateTargetImageB();
+    animateTargetImageC();
+    animateTargetImageD();
+    animateTargetImageE();
+    animateTargetImageF();
+    animateTargetImageG();
+    animateTargetImageRiki();
+  }
 
-  function playIntro(){
-    if (keeprunning ===true || secondPlayerAnimate === true) {
-      startSound = soundManager.createSound({  
-        //create sound object
-        url: 'gamemusic/aladdin/FriendLikeMe.mp3'
-      }).play(); 
-    }
-  };
-}); 
+});
