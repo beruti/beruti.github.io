@@ -1,0 +1,51 @@
+/* new style sheet */
+
+body {
+  font-family: 'Lato',Helvetica Neue,Helvetica,Arial,sans-serif;
+  background-color: #F2F3F4
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5{
+  letter-spacing: 0.02em;
+}
+
+.hyperlinkUnderline{
+  border-bottom: 2px #f30 solid;
+  color: black;
+}
+
+a !important{
+    color:black;
+    text-decoration: none;
+}
+
+a:hover {
+  color:black;
+  text-decoration: none;
+}
+
+#topLine {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 1%;
+    background: #f30;
+    z-index: 2;
+}
+
+.landingPageTitle{
+    text-decoration: none;
+    border-bottom: 0;
+    color: #f30;
+}
+
+.landingPageTitle:hover{
+  text-decoration: none;
+  border-bottom: 0;
+  color: #f30;
+}
+
+
+/* responsiveness */
