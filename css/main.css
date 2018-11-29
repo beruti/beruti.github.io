@@ -23,7 +23,7 @@ ol, ul{
 #introContainer{
 /*  border-style: solid;
   border-color: #f30;*/
-  padding: 20%;
+  padding: 15%;
   text-align: center;
   text-decoration: none;
   font-size: 17px;
@@ -38,7 +38,7 @@ ol, ul{
   color: #000000;
   text-align: center;
   font-family: 'Lato', Helvetica,Arial,sans-serif;
-  margin: 0; 
+  margin: 0;
 }
 
 .hyperlinkUnderline{
@@ -96,7 +96,7 @@ a:hover {
   font-size: 13px;
   color: #000000;
   text-align: justify;
-  font-family: 'Lato', Helvetica,Arial,sans-serif; 
+  font-family: 'Lato', Helvetica,Arial,sans-serif;
 /*  background-color: #009FE3;
 */  height: 720px;
   position: static;
@@ -513,7 +513,7 @@ border-bottom: 2px solid #f30;*/
 
     #navlist {
       margin-top: 10px;
-    } 
+    }
 
     #navlist li {
       display: block;
@@ -594,7 +594,7 @@ border-bottom: 2px solid #f30;*/
   -webkit-box-flex: 0;
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
-/*  flex property is used to size the items that are being affected*/ 
+/*  flex property is used to size the items that are being affected*/
   flex: 0 1 auto;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -618,7 +618,7 @@ border-bottom: 2px solid #f30;*/
   /*flex basis is the initial main size of the flex item - this also determines the size of the content-box unless specififed otherwise using box-sizing*/
   flex-basis: 100%;
   /* never stretch the image beyond its capacity*/
-  max-width: 100%;  
+  max-width: 100%;
 /*  border-box means that the box is set to the border and padding settings of the element naturally but not the margins - eg if you set the width to a certain amount of pixels then add a border of a certain amount of pixels then the border pixels will be added but as a proportion of the image size which will remain unchanged*/
   box-sizing: border-box;
   -webkit-box-flex: 0;
@@ -686,3 +686,36 @@ max-width: 100%;
     }
 }
 ---------------------------------------*/*/
+
+/* AKQA */
+#AKQA{
+  display: flex;
+}
+
+.AKQAImage{
+  display: flex;
+}
+
+#sherpaImage{
+  display: flex;
+  object-fit: contain;
+  width: 300px;
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 2%;
+}
+
+#SherpaText{
+  display: flex;
+  flex-direction: row;
+}
+
+#sherpa{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  min-width: 0;
+  margin: 5px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
