@@ -43,7 +43,7 @@ ol, ul{
 
 .hyperlinkUnderline{
   border-bottom: 2px #ff0043 solid;
-  color: black;
+  color: #000000de;
 }
 
 a !important{
@@ -646,7 +646,7 @@ border: 1px solid #FFF;
 /*better to show so no issues across browsers*/
 overflow: visible;
 text-align: left;
-color: black;
+color: #000000de;
 }
 
 /* flex box setting to add spacing around box elements*/
@@ -722,5 +722,5 @@ max-width: 100%;
 }
 
 .softLink{
-  color: black;
+  color: #000000de;
 }
