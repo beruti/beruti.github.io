@@ -22,19 +22,19 @@ ol, ul{
 
 #introContainer{
 /*  border-style: solid;
-  border-color: #f30;*/
+  border-color: #ff0043;*/
   padding: 15%;
   text-align: center;
   text-decoration: none;
-  font-size: 17px;
-  color: #f30;
+  font-size: 18px;
+  color: #ff0043;
   font-weight: 700;
   line-height: 27px;
   font-family: 'Lato', Helvetica,Arial,sans-serif;
 }
 
 #introParagraph{
-  font-size: 13px;
+  font-size: 16px;
   color: #000000;
   text-align: center;
   font-family: 'Lato', Helvetica,Arial,sans-serif;
@@ -42,7 +42,7 @@ ol, ul{
 }
 
 .hyperlinkUnderline{
-  border-bottom: 2px #f30 solid;
+  border-bottom: 2px #ff0043 solid;
   color: black;
 }
 
@@ -62,32 +62,33 @@ a:hover {
     right: 0;
     left: 0;
     height: 1%;
-    background: #f30;
+    background: #ff0043;
     z-index: 2;
 }
 
 #landingPageTitle{
     text-decoration: none;
     border-bottom: 0;
-    color: #f30;
+    color: #ff0043;
 }
 
 #landingPageTitle:hover{
   text-decoration: none;
   border-bottom: 0;
-  color: #f30;
+  color: #ff0043;
 }
 
 #landingPageSubtitle{
     text-decoration: none;
     border-bottom: 0;
-    color: #f30;
+    color: #ff0043;
+    letter-spacing: 1px;
 }
 
 #landingPageSubitle:hover{
   text-decoration: none;
   border-bottom: 0;
-  color: #f30;
+  color: #ff0043;
 }
 
 /* INDEX PAGE INTRO PARAGRAPH */
@@ -100,8 +101,8 @@ a:hover {
 /*  background-color: #009FE3;
 */  height: 720px;
   position: static;
-  border-bottom: 2px solid #f30;
-  border-top:2px solid #f30;
+  border-bottom: 2px solid #ff0043;
+  border-top:2px solid #ff0043;
 }
 
 #aboutMeTitle{
@@ -137,7 +138,7 @@ a:hover {
 }
 
 .projectScreenShot{
-  border: 2px #f30 solid;
+  border: 2px #ff0043 solid;
   height: 200px;
   width: 200px;
   margin: 0 auto;
@@ -146,8 +147,8 @@ a:hover {
 /*WORK SECTION*/
 #work{
 /*  background-color: #FAB001;
-border-bottom: 2px solid #f30;*/
-  border-top:2px solid #f30;
+border-bottom: 2px solid #ff0043;*/
+  border-top:2px solid #ff0043;
 }
 
 .overrideColumn{
@@ -219,17 +220,17 @@ border-bottom: 2px solid #f30;*/
   font-family: 'Lato', Helvetica,Arial,sans-serif;
   font-size: 12px;
   text-transform: uppercase;
-  color: #f30;
+  color: #ff0043;
   text-decoration: none;
-  border: 2px #f30 solid;
+  border: 2px #ff0043 solid;
   padding: 5px;
 }
 
 .projectLinks a:hover {
   text-decoration: none;
   color: #fff;
-  border-bottom: 2px #f30 solid;
-  background-color: #f30;
+  border-bottom: 2px #ff0043 solid;
+  background-color: #ff0043;
   padding: 5px;
 }
 
@@ -264,7 +265,7 @@ border-bottom: 2px solid #f30;*/
   float: right;
   margin-right: 5%;
   font-size: 13px;
-  color: #f30;
+  color: #ff0043;
   font-weight: 700;
   font-family: 'Lato',Helvetica,Arial,sans-serif;
   text-transform: uppercase;
@@ -274,7 +275,7 @@ border-bottom: 2px solid #f30;*/
 #nav a:hover {
   text-decoration: none;
   transition: 0.05s ease-out;
-  border-bottom: 2px #f30 solid;
+  border-bottom: 2px #ff0043 solid;
 }
 
 #nav li{
@@ -303,25 +304,25 @@ border-bottom: 2px solid #f30;*/
 
 .subtitle_list a {
   font-size: 13px;
-  color: #f30;
+  color: #ff0043;
   font-weight: 700;
   font-family: 'Lato',Helvetica,Arial,sans-serif;
   text-transform: uppercase;
   text-decoration: none;
-  border: 2px #f30 solid;
+  border: 2px #ff0043 solid;
   padding: 2px;
 }
 
 .subtitle_list a:hover {
   text-decoration: none;
   transition: 0.20s ease-out;
-  background-color: #f30;
+  background-color: #ff0043;
   color: #fff;
 }
 
 .active {
   text-decoration: none;
-  border-bottom: 2px #f30 solid;
+  border-bottom: 2px #ff0043 solid;
 }
 
 
@@ -351,12 +352,12 @@ border-bottom: 2px solid #f30;*/
 
 #contact a{
   font-size: 13px;
-  color: #f30;
+  color: #ff0043;
   font-weight: 700;
   font-family: 'Lato',Helvetica,Arial,sans-serif;
   text-transform: uppercase;
   text-decoration: none;
-  border: 2px #f30 solid;
+  border: 2px #ff0043 solid;
   text-align: center;
   padding: 10%;
   display: flex;
@@ -368,7 +369,7 @@ border-bottom: 2px solid #f30;*/
 #contact a:hover {
   text-decoration: none;
   transition: 0.20s ease-out;
-  background-color: #f30;
+  background-color: #ff0043;
   color: #fff;
 }
 
@@ -389,7 +390,7 @@ border-bottom: 2px solid #f30;*/
   font-weight: 700;
   font-family: 'Lato',Helvetica,Arial,sans-serif;
   text-decoration: none;
-  border-bottom: 2px #f30 solid;
+  border-bottom: 2px #ff0043 solid;
   display: inline-block;
   text-align: center;
   margin: 6vh auto;
@@ -437,7 +438,7 @@ border-bottom: 2px solid #f30;*/
 /*WDI PAGE MAIN*/
 .mainBar {
   border-width: 3px;
-  border-color: #f30;
+  border-color: #ff0043;
   width: 90px;
   margin: 0;
   padding: 0;
@@ -459,7 +460,7 @@ border-bottom: 2px solid #f30;*/
 #intro p {
   text-decoration: none;
   font-size: 14px;
-  color: #f30;
+  color: #ff0043;
   font-weight: bold;
   line-height: 20px;
   font-family: 'Lato',Helvetica,Arial,sans-serif;
@@ -473,7 +474,7 @@ border-bottom: 2px solid #f30;*/
 #info p {
   text-decoration: none;
   font-size: 14px;
-  color: #f30;
+  color: #ff0043;
   line-height: 20px;
   font-family: 'Lato',Helvetica,Arial,sans-serif;
   margin-bottom: 20px;
@@ -528,27 +529,27 @@ border-bottom: 2px solid #f30;*/
     .logo a {
       text-decoration: none;
       font-size: 18px;
-      color: #f30;
+      color: #ff0043;
       font-weight: 700;
       line-height: 20px;
     }
 
     #logoLayerClose{
-      border: 1% #f30;
+      border: 1% #ff0043;
       height: 2%
       width: 2%;
     }
 
     #logoLayerFar{
-      border: 1% #f30;
+      border: 1% #ff0043;
       height: 2%
       width: 2%;
     }
 
     #logoBar {
       border-width: 2px;
-      border-color: #f30;
-      background-color: #f30;
+      border-color: #ff0043;
+      background-color: #ff0043;
       border-style: solid;
       width: 70px;
       margin: 0;
